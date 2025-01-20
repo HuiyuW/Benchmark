@@ -1,0 +1,248 @@
+Model Path: C:/Huiyu_Wang/Work/code/LLM/Llama-3.1-8B-Instruct
+Device: cuda:0
+Parameters: max_length=4096, top_p=1, repetition_penalty=1.15
+
+Experiment Start Time: 2025-01-19 19:22:54
+
+--- Test Run 1 ---
+Output (Without Prompt):
+Based on your inputs, here are the generated Step Definitions:
+
+
+```java
+@Given("I open the login page {string}")
+public void i_open_the_login_page(String url) {
+    driver.get(url);
+}
+
+@Then("I should see Username APIKey and Login Button on the login page")
+public void i_should_see_Username_APIKey_and_Login_Button_on_the_login_page() {
+    WebElement usernameField = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-user-name")));
+    WebElement apiKeyField = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-api-key")));
+    WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-login")));
+    assertTrue(usernameField.isDisplayed());
+    assertTrue(apiKeyField.isDisplayed());
+    assertTrue(loginButton.isDisplayed());
+}
+
+@When("I enter username {string} and APIKey {string}")
+public void i_enter_username_and_APIKey(String username, String apiKey) {
+    WebElement usernameInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-user-name")));
+    usernameInput.clear();
+    usernameInput.sendKeys(username);
+
+    WebElement apiKeyInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-api-key")));
+    apiKeyInput.clear();
+    apiKeyInput.sendKeys(apiKey);
+}
+
+@And("I click the login button")
+public void i_click_the_login_button() {
+    WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-login")));
+    loginButton.click();
+}
+
+@Then("I should see the terms and conditions popup")
+public void i_should_see_the_terms_and_conditions_popup() {
+    WebElement termsConditionsPopup = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#toast-container")));
+    assertTrue(termsConditionsPopup.isDisplayed());
+}
+
+@When("I scroll down to see the accept button")
+public void i_scroll_down_to_see_the_accept_button() {
+    WebElement acceptButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-agree-agb")));
+    Actions action = new Actions(driver);
+    action.moveToElement(acceptButton).perform();
+    ((JavascriptExecutor)driver).executeScript("window.scrollBy(0,100);");
+}
+
+@And("I click the accept button")
+public void i_click_the_accept_button() {
+    WebElement acceptButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-agree-agb")));
+    acceptButton.click();
+}
+
+@Then("I should be logged in and see my profile avatar")
+public void i_should_be_logged_in_and_see_my_profile_avatar() {
+    WebElement logoutLink = wait.until(ExpectedConditions.elementToBeVisible(By.id("app-profile-header")));
+    assertNotNull(logoutLink);
+}
+```
+Note that some of these step definitions may need further adjustments according to your actual application behavior. This implementation assumes the described steps work according to their natural language understanding. Make sure to test thoroughly once implemented!
+Test Run 1 Duration: 130.71 seconds
+Generated Tokens: 575
+Generation Speed: 4.40 tokens/sec
+
+Experiment End Time: 2025-01-19 19:25:05
+Total Duration: 130.71 seconds
+Total Generated Tokens: 575
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+package huiyu.stepdefinitions_login_test_Beetlebot;
+
+import java.time.Duration;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import huiyu.BaseTest;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.And;
+
+public class Login_test_Beetlebot extends BaseTest {
+
+    private WebDriverWait wait;
+
+    @Before
+    public void init() {
+        setUp();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+
+    @Given("I open the login page {string}")
+    public void i_open_the_login_page(String url) {
+        driver.get(url);
+    }
+    
+    @Then("I should see Username APIKey and Login Button on the login page")
+    public void i_should_see_Username_APIKey_and_Login_Button_on_the_login_page() {
+        WebElement usernameField = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-user-name")));
+        WebElement apiKeyField = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-api-key")));
+        WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-login")));
+        assertTrue(usernameField.isDisplayed());
+        assertTrue(apiKeyField.isDisplayed());
+        assertTrue(loginButton.isDisplayed());
+    }
+    
+    @When("I enter username {string} and APIKey {string}")
+    public void i_enter_username_and_APIKey(String username, String apiKey) {
+        WebElement usernameInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-user-name")));
+        usernameInput.clear();
+        usernameInput.sendKeys(username);
+    
+        WebElement apiKeyInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-api-key")));
+        apiKeyInput.clear();
+        apiKeyInput.sendKeys(apiKey);
+    }
+    
+    @And("I click the login button")
+    public void i_click_the_login_button() {
+        WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-login")));
+        loginButton.click();
+    }
+    
+    @Then("I should see the terms and conditions popup")
+    public void i_should_see_the_terms_and_conditions_popup() {
+        WebElement termsConditionsPopup = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#toast-container")));
+        assertTrue(termsConditionsPopup.isDisplayed());
+    }
+    
+    @When("I scroll down to see the accept button")
+    public void i_scroll_down_to_see_the_accept_button() {
+        WebElement acceptButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-agree-agb")));
+        Actions action = new Actions(driver);
+        action.moveToElement(acceptButton).perform();
+        ((JavascriptExecutor)driver).executeScript("window.scrollBy(0,100);");
+    }
+    
+    @And("I click the accept button")
+    public void i_click_the_accept_button() {
+        WebElement acceptButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-agree-agb")));
+        acceptButton.click();
+    }
+    
+    @Then("I should be logged in and see my profile avatar")
+    public void i_should_be_logged_in_and_see_my_profile_avatar() {
+        WebElement logoutLink = wait.until(ExpectedConditions.elementToBeVisible(By.id("app-profile-header")));
+        assertNotNull(logoutLink);
+    }
+}
+
+
+
+========================================================================================================================
+执行时顺利打开网页，但是无法定位到welcome的Id，分析是由于没有明确给出css对应的id。
+
+
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.169 s <<< FAILURE! - in huiyu.stepdefinitions.CucumberTestRunner_login_test_Beetlebot
+[ERROR] Login to the TaaS Serviceportal.Successful login to the TaaS Serviceportal  Time elapsed: 5.058 s  <<< ERROR!
+org.openqa.selenium.InvalidElementStateException:
+invalid element state
+  (Session info: chrome=131.0.6778.265)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b44e78b8e03c5724e8b8dc6e56b564b5, clearElement {id=f.D0CD83733F62E61F7566F3728D4452B5.d.4CFC290E6093ECA350D7A28513199A36.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\vw3fvka\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52915}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52915/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (b44e78b8e03c5724e8b8dc6e56b564b5)] -> id: welcome-user-name]
+Session ID: b44e78b8e03c5724e8b8dc6e56b564b5
+        at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+        at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+        at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+        at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+        at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+        at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+        at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+        at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+        at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+        at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+        at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+        at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:132)
+        at huiyu.stepdefinitions_login_test_Beetlebot.Login_test_Beetlebot.i_enter_username_and_APIKey(Login_test_Beetlebot.java:48)
+        at ?.I enter username "vw2xn87" and APIKey "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD"(classpath:features/LoginTest.feature:6)
+
+[INFO] 
+[INFO] Results:
+[INFO]
+[ERROR] Errors: 
+[ERROR]   invalid element state
+  (Session info: chrome=131.0.6778.265)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b44e78b8e03c5724e8b8dc6e56b564b5, clearElement {id=f.D0CD83733F62E61F7566F3728D4452B5.d.4CFC290E6093ECA350D7A28513199A36.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\vw3fvka\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52915}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52915/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (b44e78b8e03c5724e8b8dc6e56b564b5)] -> id: welcome-user-name]
+Session ID: b44e78b8e03c5724e8b8dc6e56b564b5
+[INFO]
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.640 s
+[INFO] Finished at: 2025-01-19T19:31:50+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M9:test (default-test) on project demo:   
+[ERROR]
+[ERROR]
+[ERROR]
+[ERROR] Please refer to C:\Huiyu_Wang\Work\code\example_cucumber_langchain\demo\target\surefire-reports for the individual tes[ERROR]
+[ERROR] Please refer to C:\Huiyu_Wang\Work\code\example_cucumber_langchain\demo\target\surefire-reports for the individual tes[ERROR]
+[ERROR] Please refer to C:\Huiyu_Wang\Work\code\example_cucumber_langchain\demo\target\surefire-reports for the individual tes[ERROR]
+[ERROR]
+[ERROR]
+[ERROR] Please refer to C:\Huiyu_Wang\Work\code\example_cucumber_langchain\demo\target\surefire-reports for the individual tes[ERROR]
+[ERROR] Please refer to C:\Huiyu_Wang\Work\code\example_cucumber_langchain\demo\target\surefire-reports for the individual tes[ERROR]
+[ERROR]
+[ERROR] Please refer to C:\Huiyu_Wang\Work\code\example_cucumber_langchain\demo\target\surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

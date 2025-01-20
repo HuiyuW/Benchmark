@@ -1,0 +1,203 @@
+# Created at 2025-01-20T00:08:08.956
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (26132@WVDEWOBCLWLS802):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@23/java.io.WinNTFileSystem.getBooleanAttributes0(Native Method)
+        at java.base@23/java.io.WinNTFileSystem.getBooleanAttributes(WinNTFileSystem.java:504)
+        at java.base@23/java.io.FileSystem.hasBooleanAttributes(FileSystem.java:125)
+        at java.base@23/java.io.File.exists(File.java:836)
+        at java.base@23/jdk.internal.loader.URLClassPath$FileLoader.getResource(URLClassPath.java:1075)
+        at java.base@23/jdk.internal.loader.URLClassPath.getResource(URLClassPath.java:316)
+        at java.base@23/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:757)
+        at java.base@23/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+        at java.base@23/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+        at java.base@23/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+        at java.base@23/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
+        at app//org.asynchttpclient.netty.ssl.DefaultSslEngineFactory.buildSslContext(DefaultSslEngineFactory.java:41)
+        at app//org.asynchttpclient.netty.ssl.DefaultSslEngineFactory.init(DefaultSslEngineFactory.java:74)
+        at app//org.asynchttpclient.netty.channel.ChannelManager.<init>(ChannelManager.java:104)
+        at app//org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:92)
+        at app//org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32)
+        at app//org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94)
+        at app//org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47)
+        at app//org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135)
+        at app//org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107)
+        at app//org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94)
+        at app//org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85)
+        at app//org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80)
+        at app//org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35)
+        at app//org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:93)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81)
+        at app//org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:70)
+        at app//huiyu.BaseTest.setUp(BaseTest.java:29)
+        at app//huiyu.stepdefinitions_login_test_Beetlebot.Login_test_Beetlebot.init(Login_test_Beetlebot.java:26)
+        at java.base@23/java.lang.invoke.LambdaForm$DMH/0x000001a0d41e0000.invokeVirtual(LambdaForm$DMH)
+        at java.base@23/java.lang.invoke.LambdaForm$MH/0x000001a0d41e0800.invoke(LambdaForm$MH)
+        at java.base@23/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+        at java.base@23/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:153)
+        at java.base@23/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+        at java.base@23/java.lang.reflect.Method.invoke(Method.java:580)
+        at app//io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+        at app//io.cucumber.java.Invoker.invoke(Invoker.java:24)
+        at app//io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+        at app//io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+        at app//io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+        at app//io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+        at app//io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+        at app//io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+        at app//io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+        at app//io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+        at app//io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+        at app//io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+        at app//io.cucumber.junit.platform.engine.CucumberEngineExecutionContext$$Lambda/0x000001a0d41c0000.accept(Unknown Source)
+        at app//io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+        at app//io.cucumber.core.runtime.CucumberExecutionContext$$Lambda/0x000001a0d41c0238.run(Unknown Source)
+        at app//io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+        at app//io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+        at app//io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+        at app//io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:164)
+        at app//io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000001a0d4180228.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000001a0d4180000.invoke(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000001a0d413cca0.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+        at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService$$Lambda/0x000001a0d41b28c8.accept(Unknown Source)
+        at java.base@23/java.util.ArrayList.forEach(ArrayList.java:1597)
+        at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000001a0d4180228.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000001a0d4180000.invoke(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000001a0d413cca0.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+        at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService$$Lambda/0x000001a0d41b28c8.accept(Unknown Source)
+        at java.base@23/java.util.ArrayList.forEach(ArrayList.java:1597)
+        at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000001a0d4180228.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000001a0d4180000.invoke(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000001a0d413cca0.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+        at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+        at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+        at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@23/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@23/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+        at java.base@23/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@23/java.lang.Object.wait0(Native Method)
+        at java.base@23/java.lang.Object.wait(Object.java:378)
+        at java.base@23/java.lang.Object.wait(Object.java:352)
+        at java.base@23/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+        at java.base@23/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:166)
+        at java.base@23/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+        at java.base@23/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@23/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@23/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@23/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+        at java.base@23/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:79)
+        at java.base@23/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:151)
+        at java.base@23/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:229)
+        at java.base@23/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@23/java.lang.Thread.runWith(Thread.java:1588)
+        at java.base@23/java.lang.Thread.run(Thread.java:1575)
+        at java.base@23/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:186)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@23/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@23/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@23/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+        at java.base@23/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@23/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@23/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@23/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@23/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@23/java.lang.Thread.runWith(Thread.java:1588)
+        at java.base@23/java.lang.Thread.run(Thread.java:1575)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@23/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@23/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:187)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:683)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:80)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:368)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:426)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:438)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:390)
+        at java.base@23/java.lang.Thread.runWith(Thread.java:1588)
+        at java.base@23/java.lang.Thread.run(Thread.java:1575)
+
+"ForkJoinPool.commonPool-worker-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@23/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@23/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2135)
+        at java.base@23/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2099)
+        at java.base@23/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2043)
+        at java.base@23/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:189)
+
+"Log4j2-AsyncAppenderEventDispatcher-1-MyAsync" 
+   java.lang.Thread.State: WAITING
+        at java.base@23/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@23/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@23/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+        at java.base@23/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4021)
+        at java.base@23/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3967)
+        at java.base@23/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+        at java.base@23/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+        at app//org.apache.logging.log4j.core.appender.AsyncAppenderEventDispatcher.dispatchAll(AsyncAppenderEventDispatcher.java:82)
+        at app//org.apache.logging.log4j.core.appender.AsyncAppenderEventDispatcher.run(AsyncAppenderEventDispatcher.java:74)
+
+"AsyncHttpClient-1-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@23/java.lang.Thread.sleepNanos0(Native Method)
+        at java.base@23/java.lang.Thread.sleepNanos(Thread.java:496)
+        at java.base@23/java.lang.Thread.sleep(Thread.java:527)
+        at app//io.netty.util.HashedWheelTimer$Worker.waitForNextTick(HashedWheelTimer.java:600)
+        at app//io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:496)
+        at app//io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.base@23/java.lang.Thread.runWith(Thread.java:1588)
+        at java.base@23/java.lang.Thread.run(Thread.java:1575)
+
+
+

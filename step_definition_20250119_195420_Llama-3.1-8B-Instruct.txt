@@ -1,0 +1,79 @@
+Model Path: C:/Huiyu_Wang/Work/code/LLM/Llama-3.1-8B-Instruct
+Device: cuda:0
+Parameters: max_length=4096, top_p=1, repetition_penalty=1.15
+
+Experiment Start Time: 2025-01-19 19:54:26
+
+--- Test Run 1 ---
+Output (Without Prompt):
+Here's the generated Step Definitions to complement your existing pinned code:
+
+
+```java
+@Given("^I open the login page \"([^\"]*)\"$")
+public void i_open_the_login_page(String url) throws Exception {
+    driver.get(url);
+}
+
+@Then("^I should see Username APIKey and Login Button on the login page$")
+public void i_should_see_Username_APIKey_and_Login_Button_on_the_login_page() throws Exception {
+    assertNotNull(wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("groupui-input[id='welcome-user-name']"))),
+            "Failed to find 'username' field");
+    assertNotNull(wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("groupui-input[id='welcome-api-key']")),
+            "Failed to find 'API key' field");
+    assertNotNull(wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#welcome-login")), "Failed to find 'login button'");
+}
+
+@When("^I enter username \"([^\"]*)\" and APIKey \"([^\"]*)\"$")
+public void i_enter_username_and_APIKey(String username, String apikey) throws Exception {
+    WebElement usernameInput = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("groupui-input[id='welcome-user-name']")));
+    usernameInput.sendKeys(username);
+
+    WebElement apiKeyInput = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("groupui-input[id='welcome-api-key']")));
+    apiKeyInput.sendKeys(apikey);
+}
+
+@When("^I click the login button$")
+public void i_click_the_login_button() throws Exception {
+    wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#welcome-login"))).click();
+}
+
+@Then("^I should see the terms and conditions popup$")
+public void i_should_see_the_terms_and_conditions_popup() throws Exception {
+    assertNotNull(wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("toast-title")), "Terms & Conditions popup not displayed");
+}
+
+@When("^I scroll down to see the accept button$")
+public void i_scroll_down_to_see_the_accept_button() throws Exception {
+    Actions action = new Actions(driver);
+    action.moveToElement(
+            wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-agree-agb")))
+    ).perform();
+
+    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", wait.until(ExpectedConditions.elementToBeClickable(By.id("welcome-agree-agb"))));
+
+}
+
+@And("^I click the accept button$")
+public void i_click_the_accept_button() throws Exception {
+    wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("groupui-button#welcome-agre-agb"))).click();
+}
+
+@Then("^I should be logged in and see my profile avatar$")
+public void i_should_be_logged_in_and_see_my_profile_avatar() throws Exception {
+    assertNotNull(wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(".profile-header"))),
+            "'Profile header' not found after successful login");
+
+    assertNotNull(wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".profile-avatar"))),
+            "Avatar icon not visible after logging in successfully");
+}
+```
+
+These step definitions match your pinned code structure while implementing the missing functionality from the actual feature file. They make use of Selenium Webdriver, ExpectedConditions, and other classes mentioned in the import statements. These steps ensure accurate identification and interaction with the UI elements mentioned in the feature file through their respective CSS selectors.
+Test Run 1 Duration: 34.96 seconds
+Generated Tokens: 678
+Generation Speed: 19.39 tokens/sec
+
+Experiment End Time: 2025-01-19 19:55:01
+Total Duration: 34.97 seconds
+Total Generated Tokens: 678
