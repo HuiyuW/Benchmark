@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------
+Test set: huiyu.stepdefinitions.CucumberTestRunner_tenant
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 14.374 s <<< FAILURE! - in huiyu.stepdefinitions.CucumberTestRunner_tenant
+Tenant Management.Create and verify a new Tenant  Time elapsed: 7.929 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+The element with the reference 853f7ebd-f5d8-4ad0-99b8-4a575ba86609 is stale; either its node document is not the active document, or it is no longer connected to the DOM
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [b4c4e72f-97f2-4066-b976-b631774e6be5, isElementDisplayed {id=853f7ebd-f5d8-4ad0-99b8-4a575ba86609}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.8.0, moz:accessibilityChecks: false, moz:buildID: 20250224130137, moz:debuggerAddress: 127.0.0.1:50940, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8152, moz:profile: C:\Users\vw3fvka\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:50940/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on WINDOWS (b4c4e72f-97f2-4066-b976-b631774e6be5)] -> css selector: groupui-table-cell]
+Session ID: b4c4e72f-97f2-4066-b976-b631774e6be5
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:313)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:226)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:221)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at huiyu.stepdefinitions_tenant.TenantSteps.verifyTenantInList(TenantSteps.java:105)
+	at ✽.I should see tenant "test0426" in the list(classpath:features/tenant_management.feature:11)
+

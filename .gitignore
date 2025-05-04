@@ -1,0 +1,16 @@
+# log files
+matched_dom_mapping_step_7.json
+output.json
+LoginTest_test.java
+agent_history.gif
+# 实验结果目录
+results/
+browser_use/
+allure-results/
+.vscode/
+
+# Python 缓存
+__pycache__/
+
+
+# IDE配置（可选，推荐加上）

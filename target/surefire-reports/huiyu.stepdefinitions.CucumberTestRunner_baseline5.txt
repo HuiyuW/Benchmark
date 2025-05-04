@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: huiyu.stepdefinitions.CucumberTestRunner_baseline5
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 16.964 s <<< FAILURE! - in huiyu.stepdefinitions.CucumberTestRunner_baseline5
+Login to the TaaS Serviceportal.Successful login to the TaaS Serviceportal  Time elapsed: 16.872 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for element to be clickable: By.name: username (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.7.0, moz:accessibilityChecks: false, moz:buildID: 20250127191809, moz:debuggerAddress: 127.0.0.1:58672, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 32012, moz:profile: C:\Users\vw3fvka\AppData\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:58672/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: c08da5c4-97f5-468d-b2bd-9ae4d28973e4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at huiyu.stepdefinitions_baseline5.baseline5.i_should_see_Username_APIKey_and_Login_Button_on_the_login_page(baseline5.java:37)
+	at ✽.I should see Username APIKey and Login Button on the login page(classpath:features/baseline5.feature:5)
+

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: huiyu.stepdefinitions.CucumberTestRunner_user_deactivate_login_fail
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.18 s - in huiyu.stepdefinitions.CucumberTestRunner_user_deactivate_login_fail

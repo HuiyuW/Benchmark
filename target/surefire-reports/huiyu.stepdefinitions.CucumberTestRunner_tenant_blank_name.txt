@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: huiyu.stepdefinitions.CucumberTestRunner_tenant_blank_name
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.576 s - in huiyu.stepdefinitions.CucumberTestRunner_tenant_blank_name

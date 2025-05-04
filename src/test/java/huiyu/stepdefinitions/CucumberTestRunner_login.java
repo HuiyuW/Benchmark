@@ -7,7 +7,7 @@ import org.junit.platform.suite.api.Suite;
 import io.cucumber.junit.platform.engine.Constants;
 
 @Suite
-@SelectClasspathResource("features/LoginTest.feature") 
+@SelectClasspathResource("features/Login.feature") 
 @ConfigurationParameter(key = Constants.GLUE_PROPERTY_NAME, value = "huiyu.stepdefinitions_login") 
 public class CucumberTestRunner_login {
 }

@@ -41,6 +41,8 @@ def generate_step_definitions(task_gherkin):
         # "C:/Huiyu_Wang/Work/code/LLM/Llama-3.1-8B-Instruct",
         # "C:/Huiyu_Wang/Work/code/LLM/starcoder2-3b"
         "C:/Huiyu_Wang/Work/code/LLM/deepseek-coder-6.7b-instruct"
+        # "C:/Huiyu_Wang/Work/code/LLM/DeepSeek-R1-Distill-Qwen-7B"
+        # "C:/Huiyu_Wang/Work/code/LLM/DeepSeek-R1-Distill-Qwen-32B"
     ]
 
     device = torch.device("cuda:0")

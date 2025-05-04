@@ -27,81 +27,54 @@ public class Login_test_Beetlebot extends BaseTest {
     }
 
     @Given("I open the login page {string}")
-    public void iOpenTheLoginPage(String url) {
-        driver.get(url);
-    }
+        public void iOpenTheLoginPage(String url) {
+            driver.get(url);
+        }
     
-    @Then("I should see Username APIKey and Login Button on the login page")
-    public void iShouldSeeUsernameApiKeyAndLoginButtonOnTheLoginPage() {
-        assertNotNull(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("groupui-input[id='welcome-user-name']"))));
-        assertNotNull(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("groupui-input[id='welcome-api-key']"))));
-        assertNotNull(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#welcome-login"))));
-    }
+        @Then("I should see Username APIKey and Login Button on the login page")
+        public void iShouldSeeUsernameAPIKeyAndLoginButtonOnTheLoginPage() {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("groupui-input[id='welcome-user-name']")));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("groupui-input[id='welcome-api-key']")));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#welcome-login")));
+        }
     
-    @When("I enter username {string} and APIKey {string}")
-    public void iEnterUsernameAndApiKey(String username, String apiKey) {
-        WebElement usernameInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("groupui-input[id='welcome-user-name']")));
-        WebElement apiKeyInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("groupui-input[id='welcome-api-key']")));
-        
-        usernameInput.sendKeys(username);
-        apiKeyInput.sendKeys(apiKey);
-    }
+        @When("I enter username {string} and APIKey {string}")
+        public void iEnterUsernameAndAPIKey(String username, String apiKey) {
+            WebElement usernameInput = driver.findElement(By.cssSelector("groupui-input[id='welcome-user-name']"));
+            usernameInput.sendKeys(username);
+            WebElement apiKeyInput = driver.findElement(By.cssSelector("groupui-input[id='welcome-api-key']"));
+            apiKeyInput.sendKeys(apiKey);
+        }
     
-    @And("I click the login button")
-    public void iClickTheLoginButton() {
-        WebElement loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#welcome-login")));
-        loginBtn.click();
-    }
+        @And("I click the login button")
+        public void iClickTheLoginButton() {
+            WebElement loginButton = driver.findElement(By.cssSelector("#welcome-login"));
+            loginButton.click();
+        }
     
-    @Then("I should see the terms and conditions popup")
-    public void iShouldSeeTheTermsAndConditionsPopup() {
-        assertNotNull(wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//groupui-headline[contains(text(),'Terms & Conditions')]"))));
-    }
+        @Then("I should see the terms and conditions popup")
+        public void iShouldSeeTheTermsAndConditionsPopup() {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//groupui-headline[contains(text(),'Terms & Conditions')]")));
+        }
     
-    @When("I move to the accept button to ensure it is visible")
-    public void iMoveToTheAcceptButtonToEnsureItIsVisible() {
-        Actions action = new Actions(driver);
-        WebElement acceptBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("groupui-button#welcome-agree-agb")));
-        action.moveToElement(acceptBtn).build().perform();
-    }
+        @When("I move to the accept button to ensure it is visible")
+        public void iMoveToTheAcceptButtonToEnsureItIsVisible() {
+            WebElement acceptButton = driver.findElement(By.cssSelector("groupui-button#welcome-agree-agb"));
+            Actions actions = new Actions(driver);
+            actions.moveToElement(acceptButton).perform();
+        }
     
-    @And("I click the accept button")
-    public void iClickTheAcceptButton() {
-        WebElement acceptBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("groupui-button#welcome-agree-agb")));
-        acceptBtn.click();
-    }
+        @And("I click the accept button")
+        public void iClickTheAcceptButton() {
+            WebElement acceptButton = driver.findElement(By.cssSelector("groupui-button#welcome-agree-agb"));
+            acceptButton.click();
+        }
     
-    @Then("I should be logged in and see my profile avatar")
-    public void iShouldBeLoggedInAndSeeMyProfileAvatar() {
-        assertNotNull(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#app-profile-header"))));
-        assertNotNull(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("groupui-avatar"))));
-    }
-    
-    @When("I wait for toast error message to become invisible and profile avatar to become visible")
-    public void iWaitForToastErrorMessageToBecomeInvisibleAndProfileAvatarToBecomeVisible() {
-        // Waiting until Toast title becomes invisible
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".toast-title")));
-        // Waiting until Profile Avatar becomes visible
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("groupui-avatar")));
-    }
-    
-    @And("I click the profile avatar")
-    public void iClickTheProfileAvatar() {
-        WebElement profileAvatar = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("groupui-avatar")));
-        profileAvatar.click();
-    }
-    
-    @And("I click the logout button")
-    public void iClickTheLogoutButton() {
-        WebElement logoutBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#app-logout")));
-        logoutBtn.click();
-    }
-    
-    @Then("I should see Username APIKey and Login Button on the login page again")
-    public void iShouldSeeUsernameApiKeyAndLoginButtonOnTheLoginPageAgain() {
-        assertNotNull(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("groupui-input[id='welcome-user-name']"))));
-        assertNotNull(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("groupui-input[id='welcome-api-key']"))));
-        assertNotNull(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#welcome-login"))));
-    }
+        @Then("I should be logged in and see my profile avatar")
+        public void iShouldBeLoggedInAndSeeMyProfileAvatar() {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#app-profile-header")));
+            WebElement profileAvatar = driver.findElement(By.cssSelector("groupui-avatar"));
+            assertNotNull(profileAvatar);
+        }
 
 }
