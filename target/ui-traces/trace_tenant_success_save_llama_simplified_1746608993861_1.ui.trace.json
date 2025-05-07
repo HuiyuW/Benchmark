@@ -1,0 +1,108 @@
+[
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "abc2b1db4dcd88a5fc3ad6a426fc817098d59ea00312c31b008fdddcfa80a6a0",
+    "errorMessage": "Unable to locate element: groupui-input[id='welcome-user-name']\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.versi...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507110956301.png",
+    "locator": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T09:09:56.248358600Z"
+  },
+  {
+    "stateId": "e6e476da024768ce9dd8c65f3c2d83e047f153a13a1e3d8bdca3aeb8e288c50d",
+    "selector": "groupui-input#welcome-user-name.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507110957092.png",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-07T09:09:57.024023100Z"
+  },
+  {
+    "stateId": "d1def15ad9fb4d70878affb5dd3a00caaf1c82ce311642a36c67db87cc7cdac8",
+    "selector": "groupui-input#welcome-api-key.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507110957351.png",
+    "value": "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD",
+    "timestamp": "2025-05-07T09:09:57.289557100Z"
+  },
+  {
+    "stateId": "5c37ac52c5077024371f5f1639d962f7609ace4c71d9046b280da919722fbba0",
+    "selector": "groupui-button#welcome-login.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507110957690.png",
+    "timestamp": "2025-05-07T09:09:57.616965700Z"
+  },
+  {
+    "stateId": "73fcddcc4c5186f76d4f8f7323fdf144c1796f1001afa75c1c7b4a2fcc326b65",
+    "selector": "groupui-button#welcome-agree-agb.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507110958175.png",
+    "timestamp": "2025-05-07T09:09:58.109315200Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "73fcddcc4c5186f76d4f8f7323fdf144c1796f1001afa75c1c7b4a2fcc326b65",
+    "errorMessage": "Unable to locate element: #app-profile-header\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver in...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507110958223.png",
+    "locator": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T09:09:58.182527700Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "73fcddcc4c5186f76d4f8f7323fdf144c1796f1001afa75c1c7b4a2fcc326b65",
+    "errorMessage": "Unable to locate element: #app-profile-header\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver in...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507110958789.png",
+    "locator": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T09:09:58.745925600Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "73fcddcc4c5186f76d4f8f7323fdf144c1796f1001afa75c1c7b4a2fcc326b65",
+    "errorMessage": "Unable to locate element: #app-profile-header\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver in...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507110959354.png",
+    "locator": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T09:09:59.304803600Z"
+  },
+  {
+    "stateId": "da6262c48001d55b40fb6271905d625aad8fb66361210dfdff5410f0cc3c5aae",
+    "selector": "groupui-top-navigation-item.dropdown",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507111000839.png",
+    "timestamp": "2025-05-07T09:10:00.768547500Z"
+  },
+  {
+    "stateId": "121d5fffaa64964292136f1eeb5f0c9dfba9d7e1799d2dbe6bd782868aefe744",
+    "selector": "groupui-top-navigation-item.dropdown",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507111001474.png",
+    "timestamp": "2025-05-07T09:10:01.121652200Z"
+  },
+  {
+    "stateId": "bed5a4a1d66eafce2abeb46467b0fdfbb4cb205d9a8f8aadd6d17f646dece7e3",
+    "selector": "groupui-button#btn-new-tenant.mar-bottom-medium",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507111002298.png",
+    "timestamp": "2025-05-07T09:10:01.877560400Z"
+  },
+  {
+    "stateId": "7b8b4ca9d2e4a886fc15d97a44c0d93501f44aed4a2f783172974a3c83647d38",
+    "selector": "groupui-input#input-add-tenant-name.mar-small",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507111002739.png",
+    "value": "test0426",
+    "timestamp": "2025-05-07T09:10:02.380385500Z"
+  },
+  {
+    "stateId": "b837c80bc935bbd5ac1a36f34b6acd7444c5157df4911d4270be3b3d9b28b691",
+    "selector": "groupui-button#btn-add-tenant.eaa",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507111003369.png",
+    "timestamp": "2025-05-07T09:10:02.989107800Z"
+  }
+]

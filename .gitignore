@@ -11,6 +11,7 @@ allure-results/
 target/surefire-reports/
 target/test-classes/
 target/maven-status/
+target/ui-traces/screenshots/
 # Python 缓存
 __pycache__/
 
