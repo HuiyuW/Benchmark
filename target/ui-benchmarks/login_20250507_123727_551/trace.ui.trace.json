@@ -1,0 +1,82 @@
+[
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "abc2b1db4dcd88a5fc3ad6a426fc817098d59ea00312c31b008fdddcfa80a6a0",
+    "errorMessage": "Unable to locate element: groupui-input[id='welcome-user-name']\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.versi...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507123729950.png",
+    "locator": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T10:37:29.903554500Z"
+  },
+  {
+    "stateId": "4e69f2c27ea24a043307e2347e84150d14efb85df70b03242478a2de7c740d8a",
+    "selector": "groupui-input#welcome-user-name.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507123730710.png",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-07T10:37:30.637127600Z"
+  },
+  {
+    "stateId": "b35c950e4fc4a13a32d7ff46a4104201861f6f3ed3461248305ac9f0e4f274fd",
+    "selector": "groupui-input#welcome-api-key.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507123730955.png",
+    "value": "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD",
+    "timestamp": "2025-05-07T10:37:30.895154300Z"
+  },
+  {
+    "stateId": "18db17ab8dd403cc4460903044e9d2b2318a7585c5704177c6398f0b1defa639",
+    "selector": "groupui-button#welcome-login.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507123731285.png",
+    "timestamp": "2025-05-07T10:37:31.207478300Z"
+  },
+  {
+    "stateId": "370e1113ea0b7713f8eb4414965c0c0276c6be984a2ddc6b983fe75da1017e34",
+    "selector": "groupui-button#welcome-agree-agb.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507123731781.png",
+    "timestamp": "2025-05-07T10:37:31.701653500Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "370e1113ea0b7713f8eb4414965c0c0276c6be984a2ddc6b983fe75da1017e34",
+    "errorMessage": "Unable to locate element: #app-profile-header\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver in...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507123731830.png",
+    "locator": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T10:37:31.789683900Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "370e1113ea0b7713f8eb4414965c0c0276c6be984a2ddc6b983fe75da1017e34",
+    "errorMessage": "Unable to locate element: #app-profile-header\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver in...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507123732389.png",
+    "locator": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T10:37:32.350636600Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "370e1113ea0b7713f8eb4414965c0c0276c6be984a2ddc6b983fe75da1017e34",
+    "errorMessage": "Unable to locate element: #app-profile-header\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver in...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507123732958.png",
+    "locator": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T10:37:32.911097500Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "370e1113ea0b7713f8eb4414965c0c0276c6be984a2ddc6b983fe75da1017e34",
+    "errorMessage": "Unable to locate element: #app-profile-header\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver in...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507123733519.png",
+    "locator": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T10:37:33.473617100Z"
+  }
+]

@@ -1,0 +1,120 @@
+[
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "abc2b1db4dcd88a5fc3ad6a426fc817098d59ea00312c31b008fdddcfa80a6a0",
+    "errorMessage": "Unable to locate element: groupui-input[id='welcome-user-name']\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.versi...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507123507607.png",
+    "locator": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T10:35:07.551696500Z"
+  },
+  {
+    "stateId": "bef9f57168639b2333cc50f452e522fd3a21f439bcfd997dc4b53f13acfcc118",
+    "selector": "groupui-input#welcome-user-name.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507123508413.png",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-07T10:35:08.345495800Z"
+  },
+  {
+    "stateId": "2d11eb879da47f41f51470f889e01ce5759a04edd302c8e73733ac7d61c71e4e",
+    "selector": "groupui-input#welcome-api-key.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507123508649.png",
+    "value": "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD",
+    "timestamp": "2025-05-07T10:35:08.586216500Z"
+  },
+  {
+    "stateId": "2248fc7cc871b2a4f5c9d77181bafcdb90cc0447653de95de9604015bb4b57ae",
+    "selector": "groupui-button#welcome-login.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507123508987.png",
+    "timestamp": "2025-05-07T10:35:08.912774700Z"
+  },
+  {
+    "stateId": "50f8bb74c6de63f972dc481b110dd2f1a75628b2333431ff8902623616d31994",
+    "selector": "groupui-button#welcome-agree-agb.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507123509488.png",
+    "timestamp": "2025-05-07T10:35:09.415043400Z"
+  },
+  {
+    "stateId": "7b7b933b89cc4d260e72730c5d674507fb23736a3ddc19e81d8ebbd30d149f71",
+    "selector": "groupui-top-navigation-item.dropdown",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507123509920.png",
+    "timestamp": "2025-05-07T10:35:09.844989Z"
+  },
+  {
+    "stateId": "6b07d2de23fb9dec274a3e4cbb8fec5dcfd3bc8e79eb353a692ab61d1118e250",
+    "selector": "groupui-top-navigation-item.hydrated",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507123510248.png",
+    "timestamp": "2025-05-07T10:35:10.185038600Z"
+  },
+  {
+    "stateId": "e198bde55ad8089970f286ab66352d79fa7b8d9764cdf3d97f17b15e8ac26aeb",
+    "selector": "unknown_tag (stale)",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507123510561.png",
+    "timestamp": "2025-05-07T10:35:10.510524600Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "25ab13a7473569ea7a875037b3d0fc7cb6b9158f4dbd125636c40272c8871693",
+    "errorMessage": "Unable to locate element: .toast-title\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver info: org...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507123514792.png",
+    "locator": "By.cssSelector: .toast-title",
+    "timestamp": "2025-05-07T10:35:14.760798600Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "a61c67cd26a152359d08eef1181830b8322654d100a50800d6a651bea8631b65",
+    "errorMessage": "Unable to locate element: div.toast-message[role='alert'][aria-label^='Deactivate user']\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.ve...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507123515909.png",
+    "locator": "By.cssSelector: div.toast-message[role='alert'][aria-label^='Deactivate user']",
+    "timestamp": "2025-05-07T10:35:15.874860Z"
+  },
+  {
+    "stateId": "b667fb9872b630d61545343e88e8381d43fefc03bce036b8afa8c22dde198741",
+    "selector": "groupui-avatar.eaa",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507123516244.png",
+    "timestamp": "2025-05-07T10:35:16.187938400Z"
+  },
+  {
+    "stateId": "f8b2f25423833185075117dd88906b36b893121c9a74be0707ef35a844dd79ba",
+    "selector": "unknown_tag (stale)",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507123516525.png",
+    "timestamp": "2025-05-07T10:35:16.490579800Z"
+  },
+  {
+    "stateId": "97cbc3051269646bbb06c265e5bda26ffd133f9228529bb4bc333f3f8358eec5",
+    "selector": "groupui-input#welcome-user-name.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507123516726.png",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-07T10:35:16.677121400Z"
+  },
+  {
+    "stateId": "e36c5d995e5b50b4490ccf6aa4fe69cfc30e39d24c01066ebcba0d5348d3a03d",
+    "selector": "groupui-input#welcome-api-key.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507123516958.png",
+    "value": "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD",
+    "timestamp": "2025-05-07T10:35:16.906905900Z"
+  },
+  {
+    "stateId": "7f748c472b442389d8a012c6e50d2bc552b5452a937ebb0e6d9be3646ccd0b78",
+    "selector": "groupui-button#welcome-login.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507123517277.png",
+    "timestamp": "2025-05-07T10:35:17.215882800Z"
+  }
+]

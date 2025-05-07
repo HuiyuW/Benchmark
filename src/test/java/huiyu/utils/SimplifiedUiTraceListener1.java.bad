@@ -1,0 +1,288 @@
+// src/test/java/huiyu/utils/SimplifiedUiTraceListener.java (回到依赖特定事件回调的版本)
+package huiyu.utils; 
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import org.openqa.selenium.*;
+import org.openqa.selenium.remote.RemoteWebElement;
+import org.openqa.selenium.support.events.WebDriverListener;
+import org.openqa.selenium.TakesScreenshot;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.time.Instant;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.StringJoiner;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.Path;
+
+public class SimplifiedUiTraceListener implements WebDriverListener, TakesScreenshot {
+
+    private List<Map<String, Object>> traceEvents = new ArrayList<>();
+    private String outputFilePath;
+    private String screenshotBaseDir;
+    private WebDriver originalDriver;
+    private static final DateTimeFormatter TIMESTAMP_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS");
+
+    public SimplifiedUiTraceListener(String outputFilePath, WebDriver originalDriverInstance) {
+        this.outputFilePath = outputFilePath;
+        if (!(originalDriverInstance instanceof TakesScreenshot)) {
+            System.err.println("<<<<< SimplifiedUiTraceListener v5: Original driver does not implement TakesScreenshot. Screenshots will not be available. >>>>>");
+        }
+        this.originalDriver = originalDriverInstance;
+
+        File traceFile = new File(outputFilePath);
+        String runBaseDir = traceFile.getParent();
+        this.screenshotBaseDir = runBaseDir + File.separator + "screenshots"; 
+
+        try {
+            Files.createDirectories(Paths.get(this.screenshotBaseDir));
+             System.out.println("<<<<< SimplifiedUiTraceListener v5: Screenshot directory created: " + this.screenshotBaseDir + " >>>>>");
+        } catch (IOException e) {
+            System.err.println("<<<<< SimplifiedUiTraceListener v5: Failed to create screenshot directory: " + this.screenshotBaseDir + ". Screenshots will not be saved. Error: " + e.getMessage() + " >>>>>");
+            this.screenshotBaseDir = null;
+        }
+        System.out.println("<<<<< SimplifiedUiTraceListener v5 initialized. Trace Output: " + outputFilePath + " >>>>>");
+    }
+
+    @Override
+    public <X> X getScreenshotAs(OutputType<X> outputType) throws WebDriverException {
+        if (this.originalDriver instanceof TakesScreenshot) {
+            return ((TakesScreenshot) this.originalDriver).getScreenshotAs(outputType);
+        }
+        throw new WebDriverException("Original driver does not implement TakesScreenshot.");
+    }
+
+    private String takeScreenshotAndSave(String eventType) {
+        if (this.screenshotBaseDir == null || !(this.originalDriver instanceof TakesScreenshot)) {
+            return null;
+        }
+        try {
+            File srcFile = this.getScreenshotAs(OutputType.FILE);
+            String timestamp = Instant.now().atZone(java.time.ZoneId.systemDefault()).format(TIMESTAMP_FORMATTER);
+            String filename = eventType.replaceAll("[^a-zA-Z0-9-_]", "_") + "_" + timestamp + ".png"; 
+            File destFile = new File(this.screenshotBaseDir, filename);
+            org.openqa.selenium.io.FileHandler.copy(srcFile, destFile); 
+            System.out.println("<<<<< SimplifiedUiTraceListener v5: Screenshot saved: " + destFile.getAbsolutePath() + " >>>>>");
+            Path runBaseDirPath = Paths.get(new File(this.outputFilePath).getParent());
+            Path screenshotPath = destFile.toPath();
+            String relativePath = runBaseDirPath.relativize(screenshotPath).toString().replace("\\", "/");
+            return relativePath;
+        } catch (IOException e) {
+            System.err.println("<<<<< SimplifiedUiTraceListener v5: Failed to save screenshot for event type " + eventType + ". Error: " + e.getMessage() + " >>>>>");
+            return "error_saving_screenshot";
+        } catch (WebDriverException e) {
+             System.err.println("<<<<< SimplifiedUiTraceListener v5: Failed to take screenshot for event type " + eventType + ". WebDriverException: " + e.getMessage() + " >>>>>");
+             return "error_taking_screenshot";
+        }
+    }
+
+    private String getComponentSelector(WebElement element) { /* ... same as your provided version ... */
+         if (element == null) return "N/A (element_was_null)";
+        StringBuilder selector = new StringBuilder();
+        String localTagName = "unknown_tag";
+        try {
+            localTagName = element.getTagName();
+            selector.append(localTagName);
+            String id = element.getAttribute("id");
+            if (id != null && !id.isEmpty()) selector.append("#").append(id);
+            String name = element.getAttribute("name");
+            if (name != null && !name.isEmpty()) selector.append("[name='").append(name).append("']");
+            String className = element.getAttribute("class");
+            if (className != null && !className.trim().isEmpty()) {
+                String[] classes = className.trim().split("\\s+");
+                if (classes.length > 0 && !classes[0].trim().isEmpty()) selector.append(".").append(classes[0].trim());
+            }
+            if (Arrays.asList("button", "a", "label", "span", "div").contains(localTagName.toLowerCase())) {
+                 String text = element.getText();
+                 if (text != null && !text.trim().isEmpty()) {
+                     String shortText = text.trim().replaceAll("\\s+", " ");
+                     if (shortText.length() > 20) shortText = shortText.substring(0, 17) + "...";
+                     selector.append("[text~='").append(shortText.replace("'", "\\'")).append("']");
+                 }
+            }
+            return selector.toString();
+        } catch (StaleElementReferenceException e) {
+            return (selector.length() > 0 ? selector.toString() : localTagName) + " (stale)";
+        } catch (Exception e) {
+            return (selector.length() > 0 ? selector.toString() : localTagName) + " (error_in_selector)";
+        }
+    }
+    
+     private String getPageStateId() {
+         try {
+            String dom = this.originalDriver.getPageSource();
+            String url = this.originalDriver.getCurrentUrl();
+            String combined = url + "::" + dom;
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] hash = digest.digest(combined.getBytes(StandardCharsets.UTF_8));
+            StringBuilder hexString = new StringBuilder();
+            for (byte b : hash) {
+                String hex = Integer.toHexString(0xff & b);
+                if (hex.length() == 1) hexString.append('0');
+                hexString.append(hex);
+            }
+            return hexString.toString();
+        } catch (Exception e) {
+            System.err.println("SimplifiedUiTraceListener v5: Could not get page state ID: " + e.getMessage());
+            return "error_page_state_id";
+        }
+     }
+
+
+    private void recordInteractionEvent(String eventType, WebElement element, String value) {
+        System.out.println("<<<<< SimplifiedUiTraceListener v5: Recording interaction - Type: " + eventType + 
+                           ", Element: " + (element != null ? getComponentSelector(element) : "null") + 
+                           ", Value: " + (value != null && !value.isEmpty() ? (value.length() > 50 ? value.substring(0,47)+"..." : value) : "N/A") + 
+                           ">>>>>"); 
+        Map<String, Object> event = new HashMap<>();
+        event.put("timestamp", Instant.now().toString());
+        event.put("selector", getComponentSelector(element));
+        event.put("eventType", eventType);
+        if (value != null) {
+            event.put("value", value);
+        }
+        event.put("stateId", getPageStateId());
+        
+        String screenshotPath = takeScreenshotAndSave(eventType);
+        if (screenshotPath != null) {
+            event.put("screenshot", screenshotPath);
+        }
+        
+        this.traceEvents.add(event);
+        System.out.println("<<<<< SimplifiedUiTraceListener v5: Event added. Total events: " + this.traceEvents.size() + " >>>>>");
+    }
+    
+    private void recordNavigationChangeEvent(String eventType, String url) {
+        System.out.println("<<<<< SimplifiedUiTraceListener v5: Recording navigation - Type: " + eventType + ", URL: " + url + " >>>>>");
+        Map<String, Object> event = new HashMap<>();
+        event.put("timestamp", Instant.now().toString());
+        event.put("selector", "N/A (navigation)");
+        event.put("eventType", eventType);
+        if (url != null) {
+            event.put("url", url);
+        }
+        event.put("stateId", getPageStateId());
+
+         String screenshotPath = takeScreenshotAndSave(eventType);
+        if (screenshotPath != null) {
+            event.put("screenshot", screenshotPath);
+        }
+
+        this.traceEvents.add(event);
+        System.out.println("<<<<< SimplifiedUiTraceListener v5: Nav Event added. Total events: " + this.traceEvents.size() + " >>>>>");
+    }
+
+
+    // --- WebDriverListener Event Implementations (Relying on Specific Callbacks) ---
+
+    // We are going back to relying on specific afterXxx methods
+    // Keeping AnyCall methods but removing their logging for cleaner output
+    @Override public void beforeAnyCall(Object target, Method method, Object[] args) { } 
+    @Override public void afterAnyCall(Object target, Method method, Object[] args, Object result) { }
+    @Override public void beforeAnyWebDriverCall(WebDriver driver, Method method, Object[] args) { } 
+    @Override public void afterAnyWebDriverCall(WebDriver driver, Method method, Object[] args, Object result) { }
+    @Override public void beforeAnyWebElementCall(WebElement element, Method method, Object[] args) { } 
+    @Override public void afterAnyWebElementCall(WebElement element, Method method, Object[] args, Object result) { }
+    
+    // Specific listeners - Recording logic is placed here
+    @Override public void afterTo(WebDriver.Navigation navigation, String url) { 
+        System.out.println("<<<<< SimplifiedUiTraceListener v5: Specific afterTo triggered. URL: " + url + " >>>>>"); 
+        recordNavigationChangeEvent("navigateTo_to", url); 
+    }
+    @Override public void afterBack(WebDriver.Navigation navigation) { 
+        System.out.println("<<<<< SimplifiedUiTraceListener v5: Specific afterBack triggered. >>>>>"); 
+        recordNavigationChangeEvent("navigateBack", this.originalDriver.getCurrentUrl()); 
+    }
+    @Override public void afterForward(WebDriver.Navigation navigation) { 
+        System.out.println("<<<<< SimplifiedUiTraceListener v5: Specific afterForward triggered. >>>>>"); 
+        recordNavigationChangeEvent("navigateForward", this.originalDriver.getCurrentUrl()); 
+    }
+    @Override public void afterRefresh(WebDriver.Navigation navigation) { 
+        System.out.println("<<<<< SimplifiedUiTraceListener v5: Specific afterRefresh triggered. >>>>>"); 
+        recordNavigationChangeEvent("navigateRefresh", this.originalDriver.getCurrentUrl()); 
+    }
+    
+    @Override public void afterClick(WebElement element, WebDriver driver) { 
+        System.out.println("<<<<< SimplifiedUiTraceListener v5: Specific afterClick triggered. Element: " + getComponentSelector(element) + " >>>>>"); 
+        recordInteractionEvent("click", element, null); // Recording happens here
+    }
+
+    @Override public void afterSendKeys(WebElement element, WebDriver driver, CharSequence... keysToSend) { 
+        System.out.println("<<<<< SimplifiedUiTraceListener v5: Specific afterSendKeys triggered. Element: " + getComponentSelector(element) + " >>>>>"); 
+        StringBuilder sb = new StringBuilder();
+        if (keysToSend != null) { for (CharSequence cs : keysToSend) { if (cs != null) { sb.append(cs); } } }
+        recordInteractionEvent("sendKeys", element, sb.toString()); // Recording happens here
+    }
+    
+    @Override public void afterExecuteScript(WebDriver driver, String script, Object[] args, Object result) { 
+        System.out.println("<<<<< SimplifiedUiTraceListener v5: Specific afterExecuteScript triggered. >>>>>"); 
+        Map<String, Object> event = new HashMap<>(); 
+        event.put("timestamp", Instant.now().toString()); event.put("selector", "N/A (executeScript)"); event.put("eventType", "executeScript"); 
+        event.put("value", script.substring(0, Math.min(script.length(), 200)) + (script.length() > 200 ? "..." : "")); 
+        event.put("stateId", getPageStateId()); 
+        String screenshotPath = takeScreenshotAndSave("executeScript"); if(screenshotPath != null) event.put("screenshot", screenshotPath); this.traceEvents.add(event); System.out.println("<<<<< SimplifiedUiTraceListener v5: Script Event added (specific). Total events: " + this.traceEvents.size() + " >>>>>"); 
+    }
+
+
+    @Override
+    public void onError(Object target, Method method, Object[] args, InvocationTargetException e) {
+        Throwable targetException = e.getTargetException();
+        System.err.println("<<<<< SimplifiedUiTraceListener v5: onError. Method: " + method.getName() +
+                           ", Ex: " + targetException.getClass().getSimpleName() +
+                           ", Msg: " + targetException.getMessage().split("\n")[0] + " >>>>>");
+
+        Map<String, Object> event = new HashMap<>();
+        event.put("timestamp", Instant.now().toString());
+        event.put("eventType", "exceptionListener");
+        event.put("methodName", method.getName());
+        if (args != null && args.length > 0 && args[0] instanceof By) {
+            event.put("locator", args[0].toString());
+        } else if (args != null && args.length > 1 && args[1] instanceof By) {
+             event.put("locator", args[1].toString());
+        }
+        event.put("exceptionType", targetException.getClass().getName());
+        String errorMessage = targetException.getMessage();
+        if (errorMessage != null && errorMessage.length() > 300) { 
+            errorMessage = errorMessage.substring(0, 297) + "...";
+        }
+        event.put("errorMessage", errorMessage);
+        event.put("stateId", getPageStateId());
+
+         String screenshotPath = takeScreenshotAndSave("error_" + method.getName());
+        if (screenshotPath != null) {
+            event.put("screenshot", screenshotPath);
+        }
+        
+        this.traceEvents.add(event);
+        System.err.println("<<<<< SimplifiedUiTraceListener v5: Exception Event added. Total events: " + this.traceEvents.size() + " >>>>>");
+    }
+
+    public void saveTrace() {
+        System.out.println("<<<<< SimplifiedUiTraceListener v5: Saving trace. Events: " + this.traceEvents.size() + " >>>>>");
+        if (this.outputFilePath == null || this.outputFilePath.trim().isEmpty()) {
+            System.err.println("SimplifiedUiTraceListener v5: Output file path is not set. Trace not saved.");
+            return;
+        }
+        Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+        try (FileWriter writer = new FileWriter(this.outputFilePath)) {
+            gson.toJson(this.traceEvents, writer);
+            System.out.println("<<<<< SimplifiedUiTraceListener v5: Trace saved to " + this.outputFilePath + " (" + this.traceEvents.size() + " events) >>>>>");
+        } catch (IOException e) {
+            System.err.println("<<<<< SimplifiedUiTraceListener v5: Failed to save trace to " + this.outputFilePath + " >>>>>");
+            e.printStackTrace();
+        }
+    }
+}

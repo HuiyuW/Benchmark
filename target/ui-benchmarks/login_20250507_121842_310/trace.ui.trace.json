@@ -1,0 +1,42 @@
+[
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "2c7cf9a360aa22f8020fdc4ed241d841555cff99f842d6627c9e2cfb6070743d",
+    "errorMessage": "Unable to locate element: groupui-input[id='welcome-user-name']\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.versi...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507121844718.png",
+    "locator": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T10:18:44.667843300Z"
+  },
+  {
+    "stateId": "be172dd1eb3d64fc2b6d895c7c8d8a5bd79f20c94f2db0788b52dc296f36f7e6",
+    "selector": "groupui-input#welcome-user-name.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507121845446.png",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-07T10:18:45.388551400Z"
+  },
+  {
+    "stateId": "4168d5886e6412b38eece0938380c48ea95394469d28201e0e925166f4f4e2d9",
+    "selector": "groupui-input#welcome-api-key.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507121845687.png",
+    "value": "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD",
+    "timestamp": "2025-05-07T10:18:45.630718700Z"
+  },
+  {
+    "stateId": "88a55538032e7fbacb8676a807724e54d6fe2630fd3bf43e129593989fbf0d1f",
+    "selector": "groupui-button#welcome-login.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507121846031.png",
+    "timestamp": "2025-05-07T10:18:45.955408800Z"
+  },
+  {
+    "stateId": "6b224ff262ec9f5321401433669db31711ed7c106d344886f81e5b6ef7b9e500",
+    "selector": "groupui-button#welcome-agree-agb.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507121846490.png",
+    "timestamp": "2025-05-07T10:18:46.427267100Z"
+  }
+]

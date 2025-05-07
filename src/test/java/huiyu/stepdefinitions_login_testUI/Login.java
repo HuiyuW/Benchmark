@@ -38,6 +38,7 @@ public class Login {
 
     @Before
     public void setUp() {
+        System.out.println("===== LoginSteps: @Before setUp method CALLED (Login1.java) =====");
         // 根据你的实际情况选择 WebDriverManager 或直接设置 driver 路径
         WebDriverManager.firefoxdriver().setup();
         originalDriver = new FirefoxDriver(); // 1. 创建原始的 WebDriver

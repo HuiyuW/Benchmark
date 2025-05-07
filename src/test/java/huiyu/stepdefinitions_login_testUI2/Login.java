@@ -40,6 +40,7 @@ public class Login {
 
     @Before
     public void setUp() {
+        System.out.println("===== LoginSteps: @Before setUp method CALLED (Login2.java) =====");
         WebDriverManager.firefoxdriver().setup();
         originalDriver = new FirefoxDriver(); // Create the raw driver first
 

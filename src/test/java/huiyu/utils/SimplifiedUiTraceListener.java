@@ -3,10 +3,12 @@ package huiyu.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+// Import TakesScreenshot
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.events.WebDriverListener;
-import org.openqa.selenium.TakesScreenshot; // Import TakesScreenshot
 
 import java.io.File; // Import File
 import java.io.FileWriter;
@@ -25,40 +27,36 @@ import java.util.List;
 import java.util.Map;
 import java.util.StringJoiner;
 import java.nio.file.Files; // Import Files for directory creation
+import java.nio.file.Path;
 import java.nio.file.Paths; // Import Paths
 
-public class SimplifiedUiTraceListener implements WebDriverListener, TakesScreenshot { // Implement TakesScreenshot if originalDriver allows
+public class SimplifiedUiTraceListener implements WebDriverListener, TakesScreenshot {
 
     private List<Map<String, Object>> traceEvents = new ArrayList<>();
     private String outputFilePath;
-    private String screenshotBaseDir; // Directory to save screenshots
+    private String screenshotBaseDir; 
     private WebDriver originalDriver;
-    private static final DateTimeFormatter TIMESTAMP_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS"); // Define timestamp format
+    private static final DateTimeFormatter TIMESTAMP_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS");
 
     public SimplifiedUiTraceListener(String outputFilePath, WebDriver originalDriverInstance) {
         this.outputFilePath = outputFilePath;
-        // Ensure original driver is capable of taking screenshots
         if (!(originalDriverInstance instanceof TakesScreenshot)) {
-            System.err.println("<<<<< SimplifiedUiTraceListener v4: Original driver does not implement TakesScreenshot. Screenshots will not be available. >>>>>");
-            this.originalDriver = originalDriverInstance; // Still use the driver, just without screenshots
-        } else {
-             this.originalDriver = originalDriverInstance;
+            System.err.println("<<<<< SimplifiedUiTraceListener v6: Original driver does not implement TakesScreenshot. Screenshots will not be available. >>>>>");
         }
+        this.originalDriver = originalDriverInstance;
 
-        // Determine screenshot directory relative to trace file
         File traceFile = new File(outputFilePath);
-        this.screenshotBaseDir = traceFile.getParent() + File.separator + "screenshots"; // screenshots subdirectory
-        
-        // Create screenshot directory if it doesn't exist
+        String runBaseDir = traceFile.getParent();
+        this.screenshotBaseDir = runBaseDir + File.separator + "screenshots"; 
+
         try {
             Files.createDirectories(Paths.get(this.screenshotBaseDir));
-             System.out.println("<<<<< SimplifiedUiTraceListener v4: Screenshot directory created: " + this.screenshotBaseDir + " >>>>>");
+             System.out.println("<<<<< SimplifiedUiTraceListener v6: Screenshot directory created: " + this.screenshotBaseDir + " >>>>>");
         } catch (IOException e) {
-            System.err.println("<<<<< SimplifiedUiTraceListener v4: Failed to create screenshot directory: " + this.screenshotBaseDir + ". Screenshots will not be saved. >>>>>");
-            this.screenshotBaseDir = null; // Disable screenshots if dir creation fails
+            System.err.println("<<<<< SimplifiedUiTraceListener v6: Failed to create screenshot directory: " + this.screenshotBaseDir + ". Screenshots will not be saved. Error: " + e.getMessage() + " >>>>>");
+            this.screenshotBaseDir = null;
         }
-
-        System.out.println("<<<<< SimplifiedUiTraceListener v4 initialized. Trace Output: " + outputFilePath + " >>>>>");
+        System.out.println("<<<<< SimplifiedUiTraceListener v6 initialized. Trace Output: " + outputFilePath + " >>>>>");
     }
     
     // Implement getScreenshotAs method from TakesScreenshot interface
@@ -82,8 +80,10 @@ public class SimplifiedUiTraceListener implements WebDriverListener, TakesScreen
             File destFile = new File(this.screenshotBaseDir, filename);
             org.openqa.selenium.io.FileHandler.copy(srcFile, destFile); // Use Selenium's FileHandler
             System.out.println("<<<<< SimplifiedUiTraceListener v4: Screenshot saved: " + destFile.getAbsolutePath() + " >>>>>");
-            // Return relative path to trace file
-            return "screenshots/" + filename; // Hardcoded subdirectory name
+            Path runBaseDirPath = Paths.get(new File(this.outputFilePath).getParent());
+            Path screenshotPath = destFile.toPath();
+            String relativePath = runBaseDirPath.relativize(screenshotPath).toString().replace("\\", "/");
+            return relativePath;
         } catch (IOException e) {
             System.err.println("<<<<< SimplifiedUiTraceListener v4: Failed to save screenshot for event type " + eventType + ". Error: " + e.getMessage() + " >>>>>");
             return "error_saving_screenshot";
