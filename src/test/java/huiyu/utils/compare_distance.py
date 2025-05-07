@@ -10,7 +10,7 @@ def load_trace(path):
 
     seq = []
     for e in events:
-        if e.get("eventType") not in ("click", "sendKeys", "navigate"):
+        if e.get("eventType") not in ("click", "sendKeys", "navigate","findElement"):
             continue                # 过滤掉 exceptionListener 等
         selector = e.get("selector") or e.get("locator") or ""
         selector = re.sub(r":nth-child\(\d+\)", "", selector)  # 简单规范化
@@ -43,8 +43,11 @@ def compare_paths(ref_trace, cand_trace):
 if __name__ == "__main__":
     # 人工路径 & LLM 路径
     # result = compare_paths("C:/Huiyu_Wang/Work/code/example_cucumber_langchain/demo/target/ui-benchmarks/TenantSuccessSave_20250507_121356_446/trace.ui.trace.json", "C:/Huiyu_Wang/Work/code/example_cucumber_langchain/demo/target/ui-benchmarks/login_20250507_123727_551/trace.ui.trace.json")
-    result = compare_paths("C:/Huiyu_Wang/Work/code/example_cucumber_langchain/demo/target/ui-benchmarks/TenantSuccessSave_20250507_121356_446/trace.ui.trace.json", "C:/Huiyu_Wang/Work/code/example_cucumber_langchain/demo/target/ui-benchmarks/deactivateUser_20250507_123505_154/trace.ui.trace.json")
+    # result = compare_paths("C:/Huiyu_Wang/Work/code/example_cucumber_langchain/demo/target/ui-benchmarks/TenantSuccessSave_20250507_121356_446/trace.ui.trace.json", "C:/Huiyu_Wang/Work/code/example_cucumber_langchain/demo/target/ui-benchmarks/deactivateUser_20250507_123505_154/trace.ui.trace.json")
+    result = compare_paths("C:/Huiyu_Wang/Work/code/example_cucumber_langchain/demo/target/ui-benchmarks/tenant_blank_red_error_20250507_153403_407/trace.ui.trace.json", "C:/Huiyu_Wang/Work/code/example_cucumber_langchain/demo/target/ui-benchmarks/TenantSuccessSave_20250507_153023_095/trace.ui.trace.json")
 
     print(json.dumps(result, indent=2))
     #C:\Huiyu_Wang\Work\code\example_cucumber_langchain\demo\target\ui-benchmarks\login_20250507_123727_551\trace.ui.trace.json
     #target\ui-benchmarks\deactivateUser_20250507_123505_154
+    #target\ui-benchmarks\tenant_blank_red_error_20250507_153403_407\trace.ui.trace.json
+    #target\ui-benchmarks\TenantSuccessSave_20250507_153023_095\trace.ui.trace.json
