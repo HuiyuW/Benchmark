@@ -1,0 +1,238 @@
+[
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "84d4383ee7839c3be8ad2ea060b5770e09923dfaeadcb3542df2b518a5b3bad5",
+    "errorMessage": "Unable to locate element: groupui-input[id='welcome-user-name']\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.versi...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507145402678.png",
+    "locator": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T12:54:02.618117300Z"
+  },
+  {
+    "stateId": "811b354c4773aa28e9dd8e04380e01922416c9a80d49dc7aba21da7a132c5678",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145403257.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T12:54:03.198872100Z"
+  },
+  {
+    "stateId": "811b354c4773aa28e9dd8e04380e01922416c9a80d49dc7aba21da7a132c5678",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145403328.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-api-key']",
+    "timestamp": "2025-05-07T12:54:03.287586200Z"
+  },
+  {
+    "stateId": "811b354c4773aa28e9dd8e04380e01922416c9a80d49dc7aba21da7a132c5678",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145403405.png",
+    "value": "By.cssSelector: #welcome-login",
+    "timestamp": "2025-05-07T12:54:03.354114300Z"
+  },
+  {
+    "stateId": "811b354c4773aa28e9dd8e04380e01922416c9a80d49dc7aba21da7a132c5678",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145403478.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T12:54:03.427641200Z"
+  },
+  {
+    "stateId": "8981592a4d8218952b6c70e60f0af3fd9b8587291bbf73e31f28bc8cd0e7f9d3",
+    "selector": "groupui-input#welcome-user-name.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507145403609.png",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-07T12:54:03.547164200Z"
+  },
+  {
+    "stateId": "8981592a4d8218952b6c70e60f0af3fd9b8587291bbf73e31f28bc8cd0e7f9d3",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145403660.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-api-key']",
+    "timestamp": "2025-05-07T12:54:03.620695100Z"
+  },
+  {
+    "stateId": "a092efbba5ad993eb67017fcc51181ceb6c8ccc269bf850953f1792a7ee09a46",
+    "selector": "groupui-input#welcome-api-key.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507145403930.png",
+    "value": "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD",
+    "timestamp": "2025-05-07T12:54:03.852094300Z"
+  },
+  {
+    "stateId": "a092efbba5ad993eb67017fcc51181ceb6c8ccc269bf850953f1792a7ee09a46",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145404004.png",
+    "value": "By.cssSelector: #welcome-login",
+    "timestamp": "2025-05-07T12:54:03.947954700Z"
+  },
+  {
+    "stateId": "a25f8df4deec576a8f5713c5fd593f0e03a43756c865687b4d62940cfbbb1544",
+    "selector": "groupui-button#welcome-login.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507145404355.png",
+    "timestamp": "2025-05-07T12:54:04.280964200Z"
+  },
+  {
+    "stateId": "a25f8df4deec576a8f5713c5fd593f0e03a43756c865687b4d62940cfbbb1544",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145404410.png",
+    "value": "By.xpath: //groupui-headline[contains(text(),'Terms & Conditions')]",
+    "timestamp": "2025-05-07T12:54:04.365486800Z"
+  },
+  {
+    "stateId": "a25f8df4deec576a8f5713c5fd593f0e03a43756c865687b4d62940cfbbb1544",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145404476.png",
+    "value": "By.cssSelector: groupui-button#welcome-agree-agb",
+    "timestamp": "2025-05-07T12:54:04.427521400Z"
+  },
+  {
+    "stateId": "a25f8df4deec576a8f5713c5fd593f0e03a43756c865687b4d62940cfbbb1544",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145404680.png",
+    "value": "By.cssSelector: groupui-button#welcome-agree-agb",
+    "timestamp": "2025-05-07T12:54:04.623367100Z"
+  },
+  {
+    "stateId": "4bcb7da700d2c19d34c838126ffe6b22a33786304beade6b439561cc9c158539",
+    "selector": "groupui-button#welcome-agree-agb.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507145405016.png",
+    "timestamp": "2025-05-07T12:54:04.923834400Z"
+  },
+  {
+    "stateId": "4bcb7da700d2c19d34c838126ffe6b22a33786304beade6b439561cc9c158539",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145405067.png",
+    "value": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T12:54:05.027693900Z"
+  },
+  {
+    "stateId": "4bcb7da700d2c19d34c838126ffe6b22a33786304beade6b439561cc9c158539",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145405130.png",
+    "value": "By.cssSelector: groupui-avatar",
+    "timestamp": "2025-05-07T12:54:05.087443800Z"
+  },
+  {
+    "stateId": "4bcb7da700d2c19d34c838126ffe6b22a33786304beade6b439561cc9c158539",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145405182.png",
+    "value": "By.id: changeLanguage",
+    "timestamp": "2025-05-07T12:54:05.141550800Z"
+  },
+  {
+    "stateId": "f4b54af0522c5bc9022d04eac10d636ae5387571b4f6360d7b79994636ed8875",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145405271.png",
+    "value": "By.cssSelector: groupui-top-navigation-item.dropdown[routerlink='tenant']",
+    "timestamp": "2025-05-07T12:54:05.222116200Z"
+  },
+  {
+    "stateId": "678182d60525e12aaeee37da90e786b51c665ec6c144740490c095f4320399b8",
+    "selector": "groupui-top-navigation-item.dropdown",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507145405633.png",
+    "timestamp": "2025-05-07T12:54:05.544647200Z"
+  },
+  {
+    "stateId": "678182d60525e12aaeee37da90e786b51c665ec6c144740490c095f4320399b8",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145406120.png",
+    "value": "By.cssSelector: groupui-top-navigation-item[routerlink='tenant']",
+    "timestamp": "2025-05-07T12:54:05.648699600Z"
+  },
+  {
+    "stateId": "6b7329cbe37360f5687783e662f1000c2e8ec1e577572c15e29b6b86eeaba298",
+    "selector": "groupui-top-navigation-item.dropdown",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507145406729.png",
+    "timestamp": "2025-05-07T12:54:06.361959Z"
+  },
+  {
+    "stateId": "6b7329cbe37360f5687783e662f1000c2e8ec1e577572c15e29b6b86eeaba298",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145407076.png",
+    "value": "By.tagName: body",
+    "timestamp": "2025-05-07T12:54:06.737267500Z"
+  },
+  {
+    "stateId": "042b0b397ce9157d5c45dc66cb579051d9850ce500368f462a4db22e6c7e8422",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145407581.png",
+    "value": "By.cssSelector: #loading",
+    "timestamp": "2025-05-07T12:54:07.207423400Z"
+  },
+  {
+    "stateId": "042b0b397ce9157d5c45dc66cb579051d9850ce500368f462a4db22e6c7e8422",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145407937.png",
+    "value": "By.cssSelector: #btn-new-tenant",
+    "timestamp": "2025-05-07T12:54:07.596690400Z"
+  },
+  {
+    "stateId": "85b658b99ab06814d64903d7e1a24afce9834c0a42c2c346a1df9f4782125c5a",
+    "selector": "groupui-button#btn-new-tenant.mar-bottom-medium",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507145408574.png",
+    "timestamp": "2025-05-07T12:54:08.192810500Z"
+  },
+  {
+    "stateId": "85b658b99ab06814d64903d7e1a24afce9834c0a42c2c346a1df9f4782125c5a",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145408922.png",
+    "value": "By.cssSelector: groupui-input#input-add-tenant-name",
+    "timestamp": "2025-05-07T12:54:08.588769300Z"
+  },
+  {
+    "stateId": "0fe68e15b24355c2a4f72a2dfc8b4454eee5639a9e1f4e1a12998ad92659cf51",
+    "selector": "groupui-input#input-add-tenant-name.mar-small",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507145409374.png",
+    "value": "test0426",
+    "timestamp": "2025-05-07T12:54:09.001942800Z"
+  },
+  {
+    "stateId": "0fe68e15b24355c2a4f72a2dfc8b4454eee5639a9e1f4e1a12998ad92659cf51",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507145409731.png",
+    "value": "By.cssSelector: #btn-add-tenant",
+    "timestamp": "2025-05-07T12:54:09.391581100Z"
+  },
+  {
+    "stateId": "3e561d13d2690205a93ca45b199118bfd22532c729795da0fc6c5f956d7aa81e",
+    "selector": "groupui-button#btn-add-tenant.eaa",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507145410523.png",
+    "timestamp": "2025-05-07T12:54:09.992766100Z"
+  },
+  {
+    "stateId": "5e7aa2968a5d6873e9311cb7d5688243b70ff085b7019df1d71d9d4cd1533fce",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElements",
+    "screenshot": "screenshots/findElements_20250507145413033.png",
+    "value": "By.cssSelector: groupui-table-cell",
+    "timestamp": "2025-05-07T12:54:12.691960400Z"
+  }
+]

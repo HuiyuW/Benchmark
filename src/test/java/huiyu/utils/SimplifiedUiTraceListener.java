@@ -198,7 +198,24 @@ public class SimplifiedUiTraceListener implements WebDriverListener, TakesScreen
     }
 
     // --- WebDriverListener Event Implementations (Relying on AnyCall) ---
+    @Override
+    public void afterFindElement(WebDriver driver, By locator, WebElement element) {
+        // 任何 findElement、visibilityOf… 等底层调用都会触发
+        recordInteractionEvent(
+            "findElement",       // 事件类型
+            null,                // element 通常为 null
+            locator.toString()        // 记录 locator 字符串
+        );
+    }
 
+    @Override
+    public void afterFindElements(WebDriver driver, By locator, List<WebElement> elements) {
+        recordInteractionEvent(
+            "findElements",
+            null,
+            locator.toString()
+        );
+    }
     @Override
     public void afterAnyWebDriverCall(WebDriver driver, Method method, Object[] args, Object result) {
          String methodName = method.getName();
