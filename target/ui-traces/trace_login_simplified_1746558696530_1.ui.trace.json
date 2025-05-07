@@ -1,0 +1,44 @@
+[
+  {
+    "stateId": "5917d0c79fc04f61911f5701048aba86c166a6048f2cbee229546cd702376dea",
+    "selector": "N/A (navigation)",
+    "eventType": "get_url",
+    "url": "http://localhost:4200/",
+    "timestamp": "2025-05-06T19:11:39.005411600Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "abc2b1db4dcd88a5fc3ad6a426fc817098d59ea00312c31b008fdddcfa80a6a0",
+    "errorMessage": "Unable to locate element: groupui-input[id='welcome-user-name']\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.versi...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "locator": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-06T19:11:39.105500100Z"
+  },
+  {
+    "stateId": "d2ca440893c55e4484722beec6079984b0e5a4317235564fa01adee8f1a46dab",
+    "selector": "groupui-input#welcome-user-name.ng-untouched",
+    "eventType": "sendKeys",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-06T19:11:40.147880Z"
+  },
+  {
+    "stateId": "968f9d07f21cfbdead04d2bba449824c52841b61cf73d16f99bb99a64fe19c71",
+    "selector": "groupui-input#welcome-api-key.ng-untouched",
+    "eventType": "sendKeys",
+    "value": "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD",
+    "timestamp": "2025-05-06T19:11:40.412622200Z"
+  },
+  {
+    "stateId": "eebb01975f05edcaa7a5caaddc093a7d38cf03a0216b14194ef838dda9d18937",
+    "selector": "groupui-button#welcome-login.mar-top-small",
+    "eventType": "click",
+    "timestamp": "2025-05-06T19:11:40.746538600Z"
+  },
+  {
+    "stateId": "ee768c1f7a67a46bff210d506da8d0333ae213ee5a38e343464c5a968f53df65",
+    "selector": "groupui-button#welcome-agree-agb.mar-top-small",
+    "eventType": "click",
+    "timestamp": "2025-05-06T19:11:41.322916500Z"
+  }
+]

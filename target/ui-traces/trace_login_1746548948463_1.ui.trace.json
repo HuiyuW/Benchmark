@@ -1,0 +1,10 @@
+[
+  {
+    "method": "findElement",
+    "stateId": "ba24c78458999cfa7558d811fb7ae9df00aac73580d3c9642df0273e8d89efb4",
+    "eventType": "exceptionInListener",
+    "error": "Unable to locate element: groupui-input[id\u003d\u0027welcome-user-name\u0027]\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: \u00274.5.0\u0027, revision: \u0027fe167b119a\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002723\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCommand: [e5565fa0-de70-48ee-803f-7a3559529b37, findElement {using\u003dcss selector, value\u003dgroupui-input[id\u003d\u0027welcome-user-name\u0027]}]\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.9.0, moz:accessibilityChecks: false, moz:buildID: 20250327044906, moz:debuggerAddress: 127.0.0.1:53923, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 37300, moz:profile: C:\\Users\\vw3fvka\\AppData\\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:53923/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}\nSession ID: e5565fa0-de70-48ee-803f-7a3559529b37",
+    "timestamp": "2025-05-06T16:29:11.033206600Z",
+    "target": "org.openqa.selenium.firefox.FirefoxDriver"
+  }
+]

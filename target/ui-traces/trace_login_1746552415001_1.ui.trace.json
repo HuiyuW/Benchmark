@@ -1,0 +1,12 @@
+[
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "targetClass": "org.openqa.selenium.firefox.FirefoxDriver",
+    "stateId": "abc2b1db4dcd88a5fc3ad6a426fc817098d59ea00312c31b008fdddcfa80a6a0",
+    "errorMessage": "Unable to locate element: app-welcome > groupui-card\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCommand: [902482af-0700-4eb2-ac95-802dfac96f43, findElement {using=css selector, value=app-welcome > groupui-card}]\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.9.0, moz:accessibilityChecks: false, moz:buildID: 20250327044906, moz:debuggerAddress: 127.0.0.1:54902, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45840, moz:profile: C:\\Users\\vw3fvka\\AppData\\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:54902/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}\nSession ID: 902482af-0700-4eb2-ac95-802dfac96f43",
+    "methodName": "findElement",
+    "eventType": "exceptionInListener",
+    "locator": "By.cssSelector: app-welcome > groupui-card",
+    "timestamp": "2025-05-06T17:26:57.459809600Z"
+  }
+]

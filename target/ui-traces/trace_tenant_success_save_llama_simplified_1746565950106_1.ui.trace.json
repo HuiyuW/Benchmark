@@ -1,0 +1,75 @@
+[
+  {
+    "stateId": "5917d0c79fc04f61911f5701048aba86c166a6048f2cbee229546cd702376dea",
+    "selector": "N/A (navigation)",
+    "eventType": "get_url",
+    "url": "http://localhost:4200/",
+    "timestamp": "2025-05-06T21:12:32.499395Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "abc2b1db4dcd88a5fc3ad6a426fc817098d59ea00312c31b008fdddcfa80a6a0",
+    "errorMessage": "Unable to locate element: groupui-input[id='welcome-user-name']\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.versi...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "locator": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-06T21:12:32.552661200Z"
+  },
+  {
+    "stateId": "cac20e5c62ef1e20e997271f8698aeb430d1e1d689a32fcfc627f7cfa7018244",
+    "selector": "groupui-input#welcome-user-name.ng-untouched",
+    "eventType": "sendKeys",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-06T21:12:33.631368300Z"
+  },
+  {
+    "stateId": "576691de86fb08d5ec8f6111101d47eab064f5fcdbde4e270261345b98267812",
+    "selector": "groupui-input#welcome-api-key.ng-untouched",
+    "eventType": "sendKeys",
+    "value": "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD",
+    "timestamp": "2025-05-06T21:12:33.921276600Z"
+  },
+  {
+    "stateId": "7fb1726564d2b621d6ba4e1360689832de088eb59282ebe07e6024c3932143fc",
+    "selector": "groupui-button#welcome-login.mar-top-small",
+    "eventType": "click",
+    "timestamp": "2025-05-06T21:12:34.289158300Z"
+  },
+  {
+    "stateId": "48d6492acddbd99f6030fdd59372c08d67fe98d166d758795b36b87a522027cf",
+    "selector": "groupui-button#welcome-agree-agb.mar-top-small",
+    "eventType": "click",
+    "timestamp": "2025-05-06T21:12:34.916495200Z"
+  },
+  {
+    "stateId": "41839607d005901289f9145d739df33736eddd894cce9846560dd66d94b3001f",
+    "selector": "groupui-top-navigation-item.dropdown",
+    "eventType": "click",
+    "timestamp": "2025-05-06T21:12:35.947178400Z"
+  },
+  {
+    "stateId": "41839607d005901289f9145d739df33736eddd894cce9846560dd66d94b3001f",
+    "selector": "groupui-top-navigation-item.dropdown",
+    "eventType": "click",
+    "timestamp": "2025-05-06T21:12:36.297118100Z"
+  },
+  {
+    "stateId": "9f7bd82a0f62a0837e6fb3c540f39803e23eb3030e939bdd7382b85e2c4ed942",
+    "selector": "groupui-button#btn-new-tenant.mar-bottom-medium",
+    "eventType": "click",
+    "timestamp": "2025-05-06T21:12:36.923706300Z"
+  },
+  {
+    "stateId": "48b0515d2ddb0ca8d725cb6181692e54653698e34e7121141c249d091aede914",
+    "selector": "groupui-input#input-add-tenant-name.mar-small",
+    "eventType": "sendKeys",
+    "value": "test0426",
+    "timestamp": "2025-05-06T21:12:37.106077500Z"
+  },
+  {
+    "stateId": "34f0c6680bc29115a17987dcbbc51faf76a5fd64d2ae94acb3eeb8230403ecf6",
+    "selector": "groupui-button#btn-add-tenant.eaa",
+    "eventType": "click",
+    "timestamp": "2025-05-06T21:12:37.500685500Z"
+  }
+]

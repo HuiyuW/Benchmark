@@ -1,0 +1,11 @@
+[
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "abc2b1db4dcd88a5fc3ad6a426fc817098d59ea00312c31b008fdddcfa80a6a0",
+    "errorMessage": "Unable to locate element: groupui-input[id='welcome-user-name']\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCommand: [9aa6bacf-69da-455c-b0a5-e7ff2ea7243d, findElement {using=css selector, value=groupui-input[id='welcome-user-name']}]\nCapabilit...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "locator": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-06T19:09:05.008885Z"
+  }
+]

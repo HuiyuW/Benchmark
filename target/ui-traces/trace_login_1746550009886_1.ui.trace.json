@@ -1,0 +1,10 @@
+[
+  {
+    "method": "findElement",
+    "stateId": "0e4501c6812ef6f524018528cacc19d62ff1643fb474e212a9734b9f886d1968",
+    "eventType": "exceptionInListener",
+    "error": "Unable to locate element: #welcome-user-name\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: \u00274.5.0\u0027, revision: \u0027fe167b119a\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002723\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCommand: [980cca4b-500a-4f7f-b799-b4be60c4de92, findElement {using\u003dcss selector, value\u003d#welcome-user-name}]\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.9.0, moz:accessibilityChecks: false, moz:buildID: 20250327044906, moz:debuggerAddress: 127.0.0.1:54402, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 40108, moz:profile: C:\\Users\\vw3fvka\\AppData\\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:54402/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}\nSession ID: 980cca4b-500a-4f7f-b799-b4be60c4de92",
+    "timestamp": "2025-05-06T16:46:52.392005900Z",
+    "target": "org.openqa.selenium.firefox.FirefoxDriver"
+  }
+]

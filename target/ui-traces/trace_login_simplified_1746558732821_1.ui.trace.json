@@ -1,0 +1,35 @@
+[
+  {
+    "stateId": "ede062d322cc515bd3c91ff4878f9a0fb094d2177f005ded6889c2297c1494aa",
+    "selector": "N/A (navigation)",
+    "eventType": "get_url",
+    "url": "http://localhost:4200/",
+    "timestamp": "2025-05-06T19:12:15.591537500Z"
+  },
+  {
+    "stateId": "c7f1b37f4cdc4995e8f9c049ec51dc00af88404644cbde2482adc20a70807d3f",
+    "selector": "groupui-input#welcome-user-name.ng-untouched",
+    "eventType": "sendKeys",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-06T19:12:16.099326300Z"
+  },
+  {
+    "stateId": "d2f0d65bc2835572e39174af6ef404257548e38cf3f9a51718feb9f8358b2661",
+    "selector": "groupui-input#welcome-api-key.ng-untouched",
+    "eventType": "sendKeys",
+    "value": "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD",
+    "timestamp": "2025-05-06T19:12:16.396882100Z"
+  },
+  {
+    "stateId": "2155e375cb9e8b5692389e056e7ac030832a1ae4de584d97ac635666cd0feaa8",
+    "selector": "groupui-button#welcome-login.mar-top-small",
+    "eventType": "click",
+    "timestamp": "2025-05-06T19:12:16.752221800Z"
+  },
+  {
+    "stateId": "0037302962e71ff3bd69387d2587d2745ea3ad7d7b26fd3828e849941efc2443",
+    "selector": "groupui-button#welcome-agree-agb.mar-top-small",
+    "eventType": "click",
+    "timestamp": "2025-05-06T19:12:17.322209700Z"
+  }
+]

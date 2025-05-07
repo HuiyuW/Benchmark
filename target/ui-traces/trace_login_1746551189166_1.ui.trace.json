@@ -1,0 +1,10 @@
+[
+  {
+    "method": "findElement",
+    "stateId": "60ada00244342c3a352359c0656e2c956c66644a9ff5ea9e2c13e6d334e0db09",
+    "eventType": "exceptionInListener",
+    "error": "Unable to locate element: app-welcome \u003e groupui-card\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: \u00274.5.0\u0027, revision: \u0027fe167b119a\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002723\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCommand: [5e58bc8c-74e6-4fa5-a9b9-9fdf98f54b89, findElement {using\u003dcss selector, value\u003dapp-welcome \u003e groupui-card}]\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.9.0, moz:accessibilityChecks: false, moz:buildID: 20250327044906, moz:debuggerAddress: 127.0.0.1:56212, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45972, moz:profile: C:\\Users\\vw3fvka\\AppData\\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:56212/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}\nSession ID: 5e58bc8c-74e6-4fa5-a9b9-9fdf98f54b89",
+    "timestamp": "2025-05-06T17:06:31.627308900Z",
+    "target": "org.openqa.selenium.firefox.FirefoxDriver"
+  }
+]

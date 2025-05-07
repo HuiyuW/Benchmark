@@ -8,7 +8,9 @@ results/
 browser_use/
 allure-results/
 .vscode/
-
+target/surefire-reports/
+target/test-classes/
+target/maven-status/
 # Python 缓存
 __pycache__/
 

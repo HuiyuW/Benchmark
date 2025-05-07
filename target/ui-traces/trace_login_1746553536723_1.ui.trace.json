@@ -1,0 +1,39 @@
+[
+  {
+    "stateId": "5917d0c79fc04f61911f5701048aba86c166a6048f2cbee229546cd702376dea",
+    "selector": "N/A (navigation)",
+    "eventType": "navigateTo_to_manual",
+    "url": "http://localhost:4200/",
+    "timestamp": "2025-05-06T17:45:39.142212100Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "targetClass": "org.openqa.selenium.firefox.FirefoxDriver",
+    "stateId": "abc2b1db4dcd88a5fc3ad6a426fc817098d59ea00312c31b008fdddcfa80a6a0",
+    "errorMessage": "Unable to locate element: app-welcome > groupui-card\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCommand: [e4c75166-4175-432b-96bd-9d1e2d7c46db, findElement {using=css selector, value=app-welcome > groupui-card}]\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 128.9.0, moz:accessibilityChecks: false, moz:buildID: 20250327044906, moz:debuggerAddress: 127.0.0.1:54405, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 34852, moz:profile: C:\\Users\\vw3fvka\\AppData\\Lo..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:54405/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}\nSession ID: e4c75166-4175-432b-96bd-9d1e2d7c46db",
+    "methodName": "findElement",
+    "eventType": "exceptionInListener",
+    "locator": "By.cssSelector: app-welcome > groupui-card",
+    "timestamp": "2025-05-06T17:45:39.222948200Z"
+  },
+  {
+    "stateId": "6554dca548249a590fb21fa06ec7b3736cacc914fa8ef6d31493dcd5bf7e13dd",
+    "selector": "input[part='input']",
+    "eventType": "sendKeys_manual",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-06T17:45:40.026983600Z"
+  },
+  {
+    "stateId": "b584913a7435d012d4ca0621b534617053550217b260f9c6fab8cc4ca0ab50b5",
+    "selector": "input[part='input']",
+    "eventType": "sendKeys_manual",
+    "value": "****",
+    "timestamp": "2025-05-06T17:45:40.289810500Z"
+  },
+  {
+    "stateId": "b49c126afc1830a04da56804e5a783b35e9a406e8fde1819f2cb641e20e8bbdb",
+    "selector": "div#button[text~='Login']",
+    "eventType": "click_manual",
+    "timestamp": "2025-05-06T17:45:40.592624100Z"
+  }
+]
