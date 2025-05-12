@@ -1,4 +1,4 @@
-package huiyu.stepdefinitions_tenant_blank_name_testUI;
+package huiyu.stepdefinitions_tenant_add_false_target_testUI;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -42,7 +42,7 @@ public class TenantSteps{
 
     @Before
     public void setUp() {
-        System.out.println("===== TenantSteps: @Before setUp method CALLED (tenant_blank_red_error) ====="); 
+        System.out.println("===== TenantSteps: @Before setUp method CALLED (tenant_target_blank_error) ====="); 
         WebDriverManager.firefoxdriver().setup();
         originalDriver = new FirefoxDriver(); 
         System.out.println("===== TenantSteps: Original FirefoxDriver created: " + originalDriver.hashCode() + " =====");
@@ -50,7 +50,7 @@ public class TenantSteps{
         // --- NEW: Generate unique run directory path ---
         String timestamp = LocalDateTime.now().format(RUN_DIR_FORMATTER);
         // You can include test name here if you have access to it easily, e.g., from system properties or Cucumber hooks
-        String testName = "tenant_blank_red_error"; // Replace with actual test name if possible
+        String testName = "tenant_target_blank_error"; // Replace with actual test name if possible
         String runDirName = testName + "_" + timestamp;
         // Save under target/ui-benchmarks/run_name
         String runBasePath = Paths.get("target", "ui-benchmarks", runDirName).toString(); 
@@ -241,16 +241,7 @@ public class TenantSteps{
         assertEquals("true", reflect, "ng-reflect-disabled 属性应为 true");
     }
 
-    @Then("I should see validation error under tenant {string}")
-    public void shouldSeeValidationError(String message) {
-        WebElement error = wait.until(
-            ExpectedConditions.visibilityOfElementLocated(
-                By.cssSelector("groupui-input#input-add-tenant-name span.error-label")
-            )
-        );
-        String text = error.getText().trim();
-        assertEquals(message, text, "校验提示文本应完全匹配");
-    }  
+
   //   @And("I click the tenant name input field")
   //   public void focusOnTenantNameInput() {
   //     // 直接点击外层组件，触发内部 input 的 focus/blur 行为
@@ -290,6 +281,49 @@ public class TenantSteps{
         // 全选、删除
         host.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
     }
+    
+    @And("I click the add target button")
+    public void clickAddTargetButton() {
+        WebElement plusBtn = wait.until(
+          ExpectedConditions.elementToBeClickable(
+            By.cssSelector("groupui-button#btn-target-form-add-target")
+          )
+        );
+        plusBtn.click();
+    }
+
+    @And("I enter target {string}")
+    public void enterTarget(String url) {
+        WebElement targetInput = wait.until(
+          ExpectedConditions.elementToBeClickable(
+            By.cssSelector("groupui-input#input-target-form-target-0")
+          )
+        );
+        targetInput.sendKeys(url);
+    }
+    @Then("I should see validation error under target {string}")
+    public void shouldSeeTargetValidationError(String message) {
+        WebElement error = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("groupui-input#input-target-form-target-0 span[slot='description']")
+            )
+        );
+        assertEquals(
+            message,
+            error.getText().trim(),
+            "Expected URI validation message did not appear"
+        );
+    }
+    // @Then("I should see validation error {string}")
+    // public void shouldSeeValidationError(String message) {
+    //     WebElement error = wait.until(
+    //         ExpectedConditions.visibilityOfElementLocated(
+    //             By.cssSelector("groupui-input#input-add-tenant-name span.error-label")
+    //         )
+    //     );
+    //     String text = error.getText().trim();
+    //     assertEquals(message, text, "校验提示文本应完全匹配");
+    // }  
     @After
     public void tearDown() {
         System.out.println("===== TenantSteps: @After tearDown START ====="); 
@@ -304,5 +338,6 @@ public class TenantSteps{
              System.err.println("===== TenantSteps: @After tearDown - driver is NULL! =====");
         }
         System.out.println("===== TenantSteps: @After tearDown END =====");
-    }
+    }    
+
 }

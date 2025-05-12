@@ -1,0 +1,244 @@
+[
+  {
+    "stateId": "1edebcfb439d8317e3ac2476aea268c15704f2a6a3ed9c1a0c3454319934a5b0",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194203184.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T17:42:03.088954Z"
+  },
+  {
+    "stateId": "0645d381650d3c3cae4b51ddce831d3fc96b215dc629049945febbe970ff2e55",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194203322.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-api-key']",
+    "timestamp": "2025-05-07T17:42:03.230620200Z"
+  },
+  {
+    "stateId": "0645d381650d3c3cae4b51ddce831d3fc96b215dc629049945febbe970ff2e55",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194203424.png",
+    "value": "By.cssSelector: #welcome-login",
+    "timestamp": "2025-05-07T17:42:03.348891700Z"
+  },
+  {
+    "stateId": "0645d381650d3c3cae4b51ddce831d3fc96b215dc629049945febbe970ff2e55",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194203536.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T17:42:03.484040800Z"
+  },
+  {
+    "stateId": "5e7a209c246ba32c09c6f6fed15449c7b4324524546f6b227f04e117d65e0a7f",
+    "selector": "groupui-input#welcome-user-name.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507194203678.png",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-07T17:42:03.612825800Z"
+  },
+  {
+    "stateId": "5e7a209c246ba32c09c6f6fed15449c7b4324524546f6b227f04e117d65e0a7f",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194203766.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-api-key']",
+    "timestamp": "2025-05-07T17:42:03.701779300Z"
+  },
+  {
+    "stateId": "63e43caa00a51e720abd268979b4da753926c5e79c72e3377412947942ef2262",
+    "selector": "groupui-input#welcome-api-key.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507194204211.png",
+    "value": "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD",
+    "timestamp": "2025-05-07T17:42:04.136311700Z"
+  },
+  {
+    "stateId": "63e43caa00a51e720abd268979b4da753926c5e79c72e3377412947942ef2262",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194204273.png",
+    "value": "By.cssSelector: #welcome-login",
+    "timestamp": "2025-05-07T17:42:04.229899300Z"
+  },
+  {
+    "stateId": "26ecc143ad1282da876c2f1e05f45f882990d0c1a27bc7dc5ed6f5e3e613db7c",
+    "selector": "groupui-button#welcome-login.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507194204624.png",
+    "timestamp": "2025-05-07T17:42:04.539846100Z"
+  },
+  {
+    "stateId": "26ecc143ad1282da876c2f1e05f45f882990d0c1a27bc7dc5ed6f5e3e613db7c",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194204685.png",
+    "value": "By.xpath: //groupui-headline[contains(text(),'Terms & Conditions')]",
+    "timestamp": "2025-05-07T17:42:04.635610700Z"
+  },
+  {
+    "stateId": "26ecc143ad1282da876c2f1e05f45f882990d0c1a27bc7dc5ed6f5e3e613db7c",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194204754.png",
+    "value": "By.cssSelector: groupui-button#welcome-agree-agb",
+    "timestamp": "2025-05-07T17:42:04.710108400Z"
+  },
+  {
+    "stateId": "26ecc143ad1282da876c2f1e05f45f882990d0c1a27bc7dc5ed6f5e3e613db7c",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194204944.png",
+    "value": "By.cssSelector: groupui-button#welcome-agree-agb",
+    "timestamp": "2025-05-07T17:42:04.897106300Z"
+  },
+  {
+    "stateId": "42c365645df506aadf0ee20b1f3215c49b37e86f341c4c560d1de9da20db167f",
+    "selector": "groupui-button#welcome-agree-agb.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507194205258.png",
+    "timestamp": "2025-05-07T17:42:05.186048900Z"
+  },
+  {
+    "stateId": "42c365645df506aadf0ee20b1f3215c49b37e86f341c4c560d1de9da20db167f",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194205308.png",
+    "value": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T17:42:05.268511Z"
+  },
+  {
+    "stateId": "42c365645df506aadf0ee20b1f3215c49b37e86f341c4c560d1de9da20db167f",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194205374.png",
+    "value": "By.cssSelector: groupui-avatar",
+    "timestamp": "2025-05-07T17:42:05.328450300Z"
+  },
+  {
+    "stateId": "e67c64ae6650517a20e5589b22a0b1f352cf4396ea20c4438dabc8f49bf54d69",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194205426.png",
+    "value": "By.id: changeLanguage",
+    "timestamp": "2025-05-07T17:42:05.389025Z"
+  },
+  {
+    "stateId": "e67c64ae6650517a20e5589b22a0b1f352cf4396ea20c4438dabc8f49bf54d69",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194205517.png",
+    "value": "By.cssSelector: groupui-top-navigation-item[routerlink='tenant']",
+    "timestamp": "2025-05-07T17:42:05.478153200Z"
+  },
+  {
+    "stateId": "04e838bd8b47c5f653260170b7e49ffc8f65559e467afb456246dd6d8ac57d97",
+    "selector": "groupui-top-navigation-item.dropdown",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507194206547.png",
+    "timestamp": "2025-05-07T17:42:05.793143100Z"
+  },
+  {
+    "stateId": "04e838bd8b47c5f653260170b7e49ffc8f65559e467afb456246dd6d8ac57d97",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194206916.png",
+    "value": "By.tagName: body",
+    "timestamp": "2025-05-07T17:42:06.557691500Z"
+  },
+  {
+    "stateId": "a47b6ddb47db260589829ddc4fdd8016f0c2e6cd002b268216a22d416a5d9bbc",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194207416.png",
+    "value": "By.id: btn-new-tenant",
+    "timestamp": "2025-05-07T17:42:07.053585800Z"
+  },
+  {
+    "stateId": "dc8cc726aceda01a83f7cf9985d09d38e1dd50ca4f6f9b45861e96c5636398f5",
+    "selector": "groupui-button#btn-new-tenant.mar-bottom-medium",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507194208038.png",
+    "timestamp": "2025-05-07T17:42:07.678783400Z"
+  },
+  {
+    "stateId": "dc8cc726aceda01a83f7cf9985d09d38e1dd50ca4f6f9b45861e96c5636398f5",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194208399.png",
+    "value": "By.cssSelector: groupui-input#input-add-tenant-name",
+    "timestamp": "2025-05-07T17:42:08.048545Z"
+  },
+  {
+    "stateId": "455a14d3d71442df997fb4747ff9660eb1cc2879ff1f21b691f21e53a8e37f47",
+    "selector": "groupui-input#input-add-tenant-name.mar-small",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507194208908.png",
+    "value": "test0426",
+    "timestamp": "2025-05-07T17:42:08.492998Z"
+  },
+  {
+    "stateId": "455a14d3d71442df997fb4747ff9660eb1cc2879ff1f21b691f21e53a8e37f47",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194209274.png",
+    "value": "By.cssSelector: groupui-button#btn-target-form-add-target",
+    "timestamp": "2025-05-07T17:42:08.919337900Z"
+  },
+  {
+    "stateId": "23ddaad4e8fe13ee8a07bfdac08b888b66868093320b51a78aa210f5c8aaa1d3",
+    "selector": "groupui-button#btn-target-form-add-target.hydrated",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507194209905.png",
+    "timestamp": "2025-05-07T17:42:09.549640Z"
+  },
+  {
+    "stateId": "23ddaad4e8fe13ee8a07bfdac08b888b66868093320b51a78aa210f5c8aaa1d3",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194210276.png",
+    "value": "By.cssSelector: groupui-input#input-target-form-target-0",
+    "timestamp": "2025-05-07T17:42:09.913858500Z"
+  },
+  {
+    "stateId": "238322fe8f52fa4a89fb57f83ce19161df7a3b1745c446c05b7fed92a9871dca",
+    "selector": "groupui-input#input-target-form-target-0.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507194210737.png",
+    "value": "adc",
+    "timestamp": "2025-05-07T17:42:10.354682900Z"
+  },
+  {
+    "stateId": "c8cfa8391204a9d6bc063bc5017fdae9984ead044aa2899c853972187addf58c",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194211122.png",
+    "value": "By.id: btn-add-tenant",
+    "timestamp": "2025-05-07T17:42:10.750445400Z"
+  },
+  {
+    "stateId": "c8cfa8391204a9d6bc063bc5017fdae9984ead044aa2899c853972187addf58c",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194211518.png",
+    "value": "By.id: btn-add-tenant",
+    "timestamp": "2025-05-07T17:42:11.160055500Z"
+  },
+  {
+    "stateId": "b84ada575d3e116166a4e215c91ae107b1c12d29295069ba71908c7ff199b63e",
+    "selector": "groupui-button#btn-add-tenant.eaa",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507194212199.png",
+    "timestamp": "2025-05-07T17:42:11.796535200Z"
+  },
+  {
+    "stateId": "b84ada575d3e116166a4e215c91ae107b1c12d29295069ba71908c7ff199b63e",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507194212546.png",
+    "value": "By.cssSelector: groupui-input#input-target-form-target-0 span[slot='description']",
+    "timestamp": "2025-05-07T17:42:12.212260600Z"
+  }
+]

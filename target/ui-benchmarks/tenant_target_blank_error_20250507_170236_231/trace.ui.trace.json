@@ -1,0 +1,254 @@
+[
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "abc2b1db4dcd88a5fc3ad6a426fc817098d59ea00312c31b008fdddcfa80a6a0",
+    "errorMessage": "Unable to locate element: groupui-input[id='welcome-user-name']\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.versi...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507170238663.png",
+    "locator": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T15:02:38.614552200Z"
+  },
+  {
+    "stateId": "e6d763ed515e7293a50202da3889e8e9d0be606d2c194850f43656fcfa2eb814",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170239281.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T15:02:39.226057400Z"
+  },
+  {
+    "stateId": "e6d763ed515e7293a50202da3889e8e9d0be606d2c194850f43656fcfa2eb814",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170239375.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-api-key']",
+    "timestamp": "2025-05-07T15:02:39.325816Z"
+  },
+  {
+    "stateId": "e6d763ed515e7293a50202da3889e8e9d0be606d2c194850f43656fcfa2eb814",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170239447.png",
+    "value": "By.cssSelector: #welcome-login",
+    "timestamp": "2025-05-07T15:02:39.402290500Z"
+  },
+  {
+    "stateId": "e6d763ed515e7293a50202da3889e8e9d0be606d2c194850f43656fcfa2eb814",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170239516.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T15:02:39.479336700Z"
+  },
+  {
+    "stateId": "da5f5253e14524805ab274968a5e189a10877b89a298b2ca62d545863cdc1e1b",
+    "selector": "groupui-input#welcome-user-name.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507170239660.png",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-07T15:02:39.592030300Z"
+  },
+  {
+    "stateId": "da5f5253e14524805ab274968a5e189a10877b89a298b2ca62d545863cdc1e1b",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170239715.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-api-key']",
+    "timestamp": "2025-05-07T15:02:39.679453400Z"
+  },
+  {
+    "stateId": "bd44e5f1393220aa7551717a549aa4d13a16c41e03d8469efb3099bc78048007",
+    "selector": "groupui-input#welcome-api-key.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507170239950.png",
+    "value": "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD",
+    "timestamp": "2025-05-07T15:02:39.888387400Z"
+  },
+  {
+    "stateId": "bd44e5f1393220aa7551717a549aa4d13a16c41e03d8469efb3099bc78048007",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170240008.png",
+    "value": "By.cssSelector: #welcome-login",
+    "timestamp": "2025-05-07T15:02:39.962070400Z"
+  },
+  {
+    "stateId": "9b074314bf5a5015b0250a3e433f473161a9fa4db65f9198f34ee20558dbfd4e",
+    "selector": "groupui-button#welcome-login.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507170240362.png",
+    "timestamp": "2025-05-07T15:02:40.280960400Z"
+  },
+  {
+    "stateId": "9b074314bf5a5015b0250a3e433f473161a9fa4db65f9198f34ee20558dbfd4e",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170240419.png",
+    "value": "By.xpath: //groupui-headline[contains(text(),'Terms & Conditions')]",
+    "timestamp": "2025-05-07T15:02:40.374134500Z"
+  },
+  {
+    "stateId": "9b074314bf5a5015b0250a3e433f473161a9fa4db65f9198f34ee20558dbfd4e",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170240486.png",
+    "value": "By.cssSelector: groupui-button#welcome-agree-agb",
+    "timestamp": "2025-05-07T15:02:40.439005700Z"
+  },
+  {
+    "stateId": "9b074314bf5a5015b0250a3e433f473161a9fa4db65f9198f34ee20558dbfd4e",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170240680.png",
+    "value": "By.cssSelector: groupui-button#welcome-agree-agb",
+    "timestamp": "2025-05-07T15:02:40.630709400Z"
+  },
+  {
+    "stateId": "a2ffa6e873338eae9cc77369f5da63afabd390eb37863d28e73c80948de1e563",
+    "selector": "groupui-button#welcome-agree-agb.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507170240979.png",
+    "timestamp": "2025-05-07T15:02:40.915549900Z"
+  },
+  {
+    "stateId": "a2ffa6e873338eae9cc77369f5da63afabd390eb37863d28e73c80948de1e563",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170241030.png",
+    "value": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T15:02:40.991425600Z"
+  },
+  {
+    "stateId": "a2ffa6e873338eae9cc77369f5da63afabd390eb37863d28e73c80948de1e563",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170241089.png",
+    "value": "By.cssSelector: groupui-avatar",
+    "timestamp": "2025-05-07T15:02:41.048796800Z"
+  },
+  {
+    "stateId": "714a7e3f61b5ee69284fdb2385d9269fbe0c5064b2419bc7e3701327ed720972",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170241136.png",
+    "value": "By.id: changeLanguage",
+    "timestamp": "2025-05-07T15:02:41.101794700Z"
+  },
+  {
+    "stateId": "714a7e3f61b5ee69284fdb2385d9269fbe0c5064b2419bc7e3701327ed720972",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170241227.png",
+    "value": "By.cssSelector: groupui-top-navigation-item[routerlink='tenant']",
+    "timestamp": "2025-05-07T15:02:41.187911900Z"
+  },
+  {
+    "stateId": "9e41f716c5269e661f6f715de5ab05d5d30697ae256a51355c12adf3e053651a",
+    "selector": "groupui-top-navigation-item.dropdown",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507170241924.png",
+    "timestamp": "2025-05-07T15:02:41.587245600Z"
+  },
+  {
+    "stateId": "9e41f716c5269e661f6f715de5ab05d5d30697ae256a51355c12adf3e053651a",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170242249.png",
+    "value": "By.tagName: body",
+    "timestamp": "2025-05-07T15:02:41.933077200Z"
+  },
+  {
+    "stateId": "87455b3bcb21ccf0f9408e9c0cf8f0f93d6c6a7e3491f6bf207619a6cd6ee48b",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170242702.png",
+    "value": "By.id: btn-new-tenant",
+    "timestamp": "2025-05-07T15:02:42.382732400Z"
+  },
+  {
+    "stateId": "1b0d1ce0664e8fc040e909acad11979e0f0350ffcdb6cf85e5d5b4e2918299bf",
+    "selector": "groupui-button#btn-new-tenant.mar-bottom-medium",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507170243295.png",
+    "timestamp": "2025-05-07T15:02:42.952913900Z"
+  },
+  {
+    "stateId": "1b0d1ce0664e8fc040e909acad11979e0f0350ffcdb6cf85e5d5b4e2918299bf",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170243621.png",
+    "value": "By.cssSelector: groupui-input#input-add-tenant-name",
+    "timestamp": "2025-05-07T15:02:43.306891200Z"
+  },
+  {
+    "stateId": "d26d8d3f3fd66f3ce8ca3d9c23f1909e3a3274a00bdaf8db978948dd9635a14c",
+    "selector": "groupui-input#input-add-tenant-name.mar-small",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507170244062.png",
+    "value": "test0426",
+    "timestamp": "2025-05-07T15:02:43.713768300Z"
+  },
+  {
+    "stateId": "d26d8d3f3fd66f3ce8ca3d9c23f1909e3a3274a00bdaf8db978948dd9635a14c",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170244412.png",
+    "value": "By.cssSelector: groupui-button#btn-target-form-add-target",
+    "timestamp": "2025-05-07T15:02:44.070694400Z"
+  },
+  {
+    "stateId": "82bf987ad163e75f08e8ca5af529eb7fc3f7a07a69e498ea64f2b81e3d618ced",
+    "selector": "groupui-button#btn-target-form-add-target.hydrated",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507170245036.png",
+    "timestamp": "2025-05-07T15:02:44.677301800Z"
+  },
+  {
+    "stateId": "82bf987ad163e75f08e8ca5af529eb7fc3f7a07a69e498ea64f2b81e3d618ced",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170245390.png",
+    "value": "By.cssSelector: groupui-input#input-target-form-target-0",
+    "timestamp": "2025-05-07T15:02:45.044576700Z"
+  },
+  {
+    "stateId": "82b0c4429bca2fa659de6f1563f41f5f1edb5462fa281a2a9ac61b458f62246d",
+    "selector": "groupui-input#input-target-form-target-0.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507170245799.png",
+    "value": "adc",
+    "timestamp": "2025-05-07T15:02:45.456503200Z"
+  },
+  {
+    "stateId": "5ea6fdd6a7f79f499ec46462e6c92120da2afcbcd4e6d7b469b524490cbd792d",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170246146.png",
+    "value": "By.id: btn-add-tenant",
+    "timestamp": "2025-05-07T15:02:45.809636900Z"
+  },
+  {
+    "stateId": "f21a9e5f3a9381affab66bcef56a11b9099f99385b2f5e5c3198e40e33e65011",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170246502.png",
+    "value": "By.id: btn-add-tenant",
+    "timestamp": "2025-05-07T15:02:46.171406500Z"
+  },
+  {
+    "stateId": "edce7d9b3473fca0a1a5dde3ed1f4c693b49f58f07bd77cf2322a6a991e8638a",
+    "selector": "groupui-button#btn-add-tenant.eaa",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507170247112.png",
+    "timestamp": "2025-05-07T15:02:46.760467800Z"
+  },
+  {
+    "stateId": "edce7d9b3473fca0a1a5dde3ed1f4c693b49f58f07bd77cf2322a6a991e8638a",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507170247444.png",
+    "value": "By.cssSelector: groupui-input#input-target-form-target-0 span[slot='description']",
+    "timestamp": "2025-05-07T15:02:47.122328200Z"
+  }
+]

@@ -1,0 +1,269 @@
+[
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "abc2b1db4dcd88a5fc3ad6a426fc817098d59ea00312c31b008fdddcfa80a6a0",
+    "errorMessage": "Unable to locate element: groupui-input[id='welcome-user-name']\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.versi...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507173714555.png",
+    "locator": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T15:37:14.494662900Z"
+  },
+  {
+    "stateId": "68da2898c8af734eddacbb747ccb6805aca7cbe59ed456af3b62c025a1e4e1d6",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173715133.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T15:37:15.082907800Z"
+  },
+  {
+    "stateId": "68da2898c8af734eddacbb747ccb6805aca7cbe59ed456af3b62c025a1e4e1d6",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173715221.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-api-key']",
+    "timestamp": "2025-05-07T15:37:15.175642400Z"
+  },
+  {
+    "stateId": "68da2898c8af734eddacbb747ccb6805aca7cbe59ed456af3b62c025a1e4e1d6",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173715292.png",
+    "value": "By.cssSelector: #welcome-login",
+    "timestamp": "2025-05-07T15:37:15.248436900Z"
+  },
+  {
+    "stateId": "68da2898c8af734eddacbb747ccb6805aca7cbe59ed456af3b62c025a1e4e1d6",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173715367.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-user-name']",
+    "timestamp": "2025-05-07T15:37:15.319396900Z"
+  },
+  {
+    "stateId": "742cac4ccced1fbcb91046db16df2fbaf0f8a379d1c05bc1e6f020e37248f559",
+    "selector": "groupui-input#welcome-user-name.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507173715522.png",
+    "value": "vw2xn87",
+    "timestamp": "2025-05-07T15:37:15.448290600Z"
+  },
+  {
+    "stateId": "742cac4ccced1fbcb91046db16df2fbaf0f8a379d1c05bc1e6f020e37248f559",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173715580.png",
+    "value": "By.cssSelector: groupui-input[id='welcome-api-key']",
+    "timestamp": "2025-05-07T15:37:15.542231900Z"
+  },
+  {
+    "stateId": "e8ef17e0b65af67e5c711f641b78d33181ad8823d9b1f823c2c6ac568f3b6baa",
+    "selector": "groupui-input#welcome-api-key.ng-untouched",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507173715817.png",
+    "value": "xOqMiHJegL3JvnOCK9rb0vOG1pZ7Oc1C7fAfRR0WEuk4keuwEc0yAUF3QSahP8G3IBKw2FO2zvcr7njD",
+    "timestamp": "2025-05-07T15:37:15.756082600Z"
+  },
+  {
+    "stateId": "e8ef17e0b65af67e5c711f641b78d33181ad8823d9b1f823c2c6ac568f3b6baa",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173715873.png",
+    "value": "By.cssSelector: #welcome-login",
+    "timestamp": "2025-05-07T15:37:15.828073800Z"
+  },
+  {
+    "stateId": "5f0e31522bb3cde45629f2f68a38ffb0e7a2909103814119569a7375f1ea9a9d",
+    "selector": "groupui-button#welcome-login.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507173716207.png",
+    "timestamp": "2025-05-07T15:37:16.136894200Z"
+  },
+  {
+    "stateId": "5f0e31522bb3cde45629f2f68a38ffb0e7a2909103814119569a7375f1ea9a9d",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173716267.png",
+    "value": "By.xpath: //groupui-headline[contains(text(),'Terms & Conditions')]",
+    "timestamp": "2025-05-07T15:37:16.219135200Z"
+  },
+  {
+    "stateId": "5f0e31522bb3cde45629f2f68a38ffb0e7a2909103814119569a7375f1ea9a9d",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173716334.png",
+    "value": "By.cssSelector: groupui-button#welcome-agree-agb",
+    "timestamp": "2025-05-07T15:37:16.289033700Z"
+  },
+  {
+    "stateId": "5f0e31522bb3cde45629f2f68a38ffb0e7a2909103814119569a7375f1ea9a9d",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173716517.png",
+    "value": "By.cssSelector: groupui-button#welcome-agree-agb",
+    "timestamp": "2025-05-07T15:37:16.473517400Z"
+  },
+  {
+    "stateId": "1d19673c123d58271e16431b75bc0224ce3d6ecde8a69f928c14902ad6ef99dc",
+    "selector": "groupui-button#welcome-agree-agb.mar-top-small",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507173716843.png",
+    "timestamp": "2025-05-07T15:37:16.762846Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "1d19673c123d58271e16431b75bc0224ce3d6ecde8a69f928c14902ad6ef99dc",
+    "errorMessage": "Unable to locate element: #app-profile-header\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver in...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507173716896.png",
+    "locator": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T15:37:16.853769500Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "1d19673c123d58271e16431b75bc0224ce3d6ecde8a69f928c14902ad6ef99dc",
+    "errorMessage": "Unable to locate element: #app-profile-header\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver in...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507173717446.png",
+    "locator": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T15:37:17.410775300Z"
+  },
+  {
+    "exceptionType": "org.openqa.selenium.NoSuchElementException",
+    "stateId": "1d19673c123d58271e16431b75bc0224ce3d6ecde8a69f928c14902ad6ef99dc",
+    "errorMessage": "Unable to locate element: #app-profile-header\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: '4.5.0', revision: 'fe167b119a'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'\nDriver in...",
+    "methodName": "findElement",
+    "eventType": "exceptionListener",
+    "screenshot": "screenshots/error_findElement_20250507173717998.png",
+    "locator": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T15:37:17.954210Z"
+  },
+  {
+    "stateId": "e72099e61a8127ce8807fe85b1e5747ee6a1463ac115799320110cdc1e1d4f2b",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173718565.png",
+    "value": "By.cssSelector: #app-profile-header",
+    "timestamp": "2025-05-07T15:37:18.519361500Z"
+  },
+  {
+    "stateId": "e72099e61a8127ce8807fe85b1e5747ee6a1463ac115799320110cdc1e1d4f2b",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173718629.png",
+    "value": "By.cssSelector: groupui-avatar",
+    "timestamp": "2025-05-07T15:37:18.587803600Z"
+  },
+  {
+    "stateId": "e72099e61a8127ce8807fe85b1e5747ee6a1463ac115799320110cdc1e1d4f2b",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173718682.png",
+    "value": "By.id: changeLanguage",
+    "timestamp": "2025-05-07T15:37:18.643597800Z"
+  },
+  {
+    "stateId": "f5664cadf0e83fb4a85b4ead6aa48752da3c98ca8f6b8b8bd6675da4ebb7c48c",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173718764.png",
+    "value": "By.cssSelector: groupui-top-navigation-item[routerlink='tenant']",
+    "timestamp": "2025-05-07T15:37:18.728113500Z"
+  },
+  {
+    "stateId": "3f52e30e73f759302cd17ca2101233fc9bc2975c75e1414362731c43ca450475",
+    "selector": "groupui-top-navigation-item.dropdown",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507173719116.png",
+    "timestamp": "2025-05-07T15:37:19.036734500Z"
+  },
+  {
+    "stateId": "3f52e30e73f759302cd17ca2101233fc9bc2975c75e1414362731c43ca450475",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173719174.png",
+    "value": "By.tagName: body",
+    "timestamp": "2025-05-07T15:37:19.127468200Z"
+  },
+  {
+    "stateId": "062a6b3a67b5e918a714fe2838529a94573c1b6fc559362e1c7f6a8bca963fbf",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173719697.png",
+    "value": "By.id: btn-new-tenant",
+    "timestamp": "2025-05-07T15:37:19.382203700Z"
+  },
+  {
+    "stateId": "3a0f1fbf9271dc28bdb7a06fce28ffb29a375dd49ce5d9023001ae810cdcc826",
+    "selector": "groupui-button#btn-new-tenant.mar-bottom-medium",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507173720306.png",
+    "timestamp": "2025-05-07T15:37:19.945706600Z"
+  },
+  {
+    "stateId": "3a0f1fbf9271dc28bdb7a06fce28ffb29a375dd49ce5d9023001ae810cdcc826",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173720656.png",
+    "value": "By.cssSelector: groupui-input#input-add-tenant-name",
+    "timestamp": "2025-05-07T15:37:20.322065100Z"
+  },
+  {
+    "stateId": "f7b8c3fb60bed57f118720e0dd130943a47ca6024d815e3685078ff5ce6437f0",
+    "selector": "groupui-input#input-add-tenant-name.mar-small",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507173721139.png",
+    "value": "test0425",
+    "timestamp": "2025-05-07T15:37:20.769560600Z"
+  },
+  {
+    "stateId": "f7b8c3fb60bed57f118720e0dd130943a47ca6024d815e3685078ff5ce6437f0",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173721490.png",
+    "value": "By.cssSelector: groupui-input#input-add-tenant-name",
+    "timestamp": "2025-05-07T15:37:21.156949200Z"
+  },
+  {
+    "stateId": "a5450be0fcfae15a985512f504c6fd3e011c9ed7ee7e1726ac25a695b866b300",
+    "selector": "groupui-input#input-add-tenant-name.mar-small",
+    "eventType": "sendKeys",
+    "screenshot": "screenshots/sendKeys_20250507173721903.png",
+    "value": "a",
+    "timestamp": "2025-05-07T15:37:21.542782800Z"
+  },
+  {
+    "stateId": "a5450be0fcfae15a985512f504c6fd3e011c9ed7ee7e1726ac25a695b866b300",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173722251.png",
+    "value": "By.id: btn-add-tenant",
+    "timestamp": "2025-05-07T15:37:21.903961900Z"
+  },
+  {
+    "stateId": "a5450be0fcfae15a985512f504c6fd3e011c9ed7ee7e1726ac25a695b866b300",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173722607.png",
+    "value": "By.id: btn-add-tenant",
+    "timestamp": "2025-05-07T15:37:22.268627100Z"
+  },
+  {
+    "stateId": "db883d314c72579bac7ff4118a867d6bf40eeba78c5a91a852a5a898d98c61fc",
+    "selector": "groupui-button#btn-add-tenant.eaa",
+    "eventType": "click",
+    "screenshot": "screenshots/click_20250507173723254.png",
+    "timestamp": "2025-05-07T15:37:22.875760200Z"
+  },
+  {
+    "stateId": "db883d314c72579bac7ff4118a867d6bf40eeba78c5a91a852a5a898d98c61fc",
+    "selector": "N/A (element_was_null)",
+    "eventType": "findElement",
+    "screenshot": "screenshots/findElement_20250507173723588.png",
+    "value": "By.cssSelector: groupui-input#input-add-tenant-name span.error-label",
+    "timestamp": "2025-05-07T15:37:23.265719500Z"
+  }
+]
